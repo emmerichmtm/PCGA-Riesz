@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Preserve the precise downloaded source and checksummed ancillary file bytes.
+/main_arxiv_v1.tex -text
+/PRIMEarxiv.sty -text
+/00README.json -text
+/anc/** -text
+*.pdf binary

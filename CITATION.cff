@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using these data or programs."
+type: software
+title: "Parameterized Complexity and Geometric Approximation of Riesz Energy Subset Selection — data and code"
+authors:
+  - family-names: Emmerich
+    given-names: Michael
+    affiliation: "Faculty of Information Technology, University of Jyväskylä, Finland"
+    orcid: "https://orcid.org/0000-0002-7342-2090"
+  - family-names: Atta
+    given-names: Soumen
+    affiliation: "Faculty of Information Technology, University of Jyväskylä, Finland"
+    orcid: "https://orcid.org/0000-0001-7492-5602"
+repository-code: "https://github.com/emmerichmtm/PCGA-Riesz"
+version: arxiv-v1
+date-released: 2026-11-09

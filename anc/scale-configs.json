@@ -1,0 +1,2357 @@
+[
+  {
+    "id": "v3-half-000",
+    "config": {
+      "n": 1000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-001",
+    "config": {
+      "n": 1000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-002",
+    "config": {
+      "n": 1000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-003",
+    "config": {
+      "n": 1000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-004",
+    "config": {
+      "n": 1000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-005",
+    "config": {
+      "n": 1000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-006",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size",
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-007",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size",
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-008",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size",
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-009",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-010",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-011",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-012",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size",
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-013",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size",
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-014",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size",
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-015",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-016",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-017",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-018",
+    "config": {
+      "n": 1000000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-019",
+    "config": {
+      "n": 1000000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-020",
+    "config": {
+      "n": 1000000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-021",
+    "config": {
+      "n": 1000000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-022",
+    "config": {
+      "n": 1000000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-023",
+    "config": {
+      "n": 1000000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "uniform",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "input_size"
+    ]
+  },
+  {
+    "id": "v3-half-024",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-025",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-026",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-027",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/1024",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-028",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/1024",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-029",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/1024",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-030",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/256",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-031",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/256",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-032",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/256",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-033",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/64",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-034",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/64",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-035",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/64",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-036",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/16",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-037",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/16",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-038",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/16",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-039",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/4",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-040",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/4",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-041",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1/4",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-042",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-043",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-044",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 5,
+      "rho": "1",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-045",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-046",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-047",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-048",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/256",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-049",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/256",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-050",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/256",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-051",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/64",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-052",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/64",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-053",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/64",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-054",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/16",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-055",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/16",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-056",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/16",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-057",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-058",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-059",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-060",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-061",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-062",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-063",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-064",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-065",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-066",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/1024",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-067",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/1024",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-068",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/1024",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-069",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/256",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-070",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/256",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-071",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/256",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-072",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/64",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-073",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/64",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-074",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/64",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-075",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/16",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-076",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/16",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-077",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/16",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-078",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-079",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-080",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-081",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-082",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-083",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-084",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-085",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-086",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-087",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/1024",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-088",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/1024",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-089",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/1024",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-090",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/256",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-091",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/256",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-092",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/256",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-093",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/64",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-094",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/64",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-095",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/64",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-096",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/16",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-097",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/16",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-098",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/16",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-099",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/4",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-100",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/4",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-101",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1/4",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-102",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1",
+      "seed": 17
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-103",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1",
+      "seed": 29
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-104",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 50,
+      "rho": "1",
+      "seed": 43
+    },
+    "groups": [
+      "cluster_spread"
+    ]
+  },
+  {
+    "id": "v3-half-105",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 17
+    },
+    "groups": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "v3-half-106",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 29
+    },
+    "groups": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "v3-half-107",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 43
+    },
+    "groups": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "v3-half-108",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 17
+    },
+    "groups": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "v3-half-109",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 29
+    },
+    "groups": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "v3-half-110",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/1024",
+      "seed": 43
+    },
+    "groups": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "v3-half-111",
+    "config": {
+      "n": 10000,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 6,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-112",
+    "config": {
+      "n": 10000,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 6,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-113",
+    "config": {
+      "n": 10000,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 6,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-114",
+    "config": {
+      "n": 10000,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 8,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-115",
+    "config": {
+      "n": 10000,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 8,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-116",
+    "config": {
+      "n": 10000,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 8,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-117",
+    "config": {
+      "n": 10000,
+      "k": 6,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 12,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-118",
+    "config": {
+      "n": 10000,
+      "k": 6,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 12,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-119",
+    "config": {
+      "n": 10000,
+      "k": 6,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 12,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-120",
+    "config": {
+      "n": 10000,
+      "k": 8,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 16,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-121",
+    "config": {
+      "n": 10000,
+      "k": 8,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 16,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-122",
+    "config": {
+      "n": 10000,
+      "k": 8,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 16,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "selected_size"
+    ]
+  },
+  {
+    "id": "v3-half-123",
+    "config": {
+      "n": 15,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 6,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-124",
+    "config": {
+      "n": 15,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 6,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-125",
+    "config": {
+      "n": 15,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 6,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-126",
+    "config": {
+      "n": 20,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 8,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-127",
+    "config": {
+      "n": 20,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 8,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-128",
+    "config": {
+      "n": 20,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 8,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-129",
+    "config": {
+      "n": 25,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-130",
+    "config": {
+      "n": 25,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-131",
+    "config": {
+      "n": 25,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "tiny_optimum"
+    ]
+  },
+  {
+    "id": "v3-half-132",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17,
+      "translation": "1/2048"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-133",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29,
+      "translation": "1/2048"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-134",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43,
+      "translation": "1/2048"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-135",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17,
+      "translation": "1/1024"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-136",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29,
+      "translation": "1/1024"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-137",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43,
+      "translation": "1/1024"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-138",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 17,
+      "translation": "3/2048"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-139",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 29,
+      "translation": "3/2048"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-140",
+    "config": {
+      "n": 100000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 10,
+      "rho": "1/4096",
+      "seed": 43,
+      "translation": "3/2048"
+    },
+    "groups": [
+      "grid_translation"
+    ]
+  },
+  {
+    "id": "v3-half-141",
+    "config": {
+      "n": 10000,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-142",
+    "config": {
+      "n": 10000,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-143",
+    "config": {
+      "n": 10000,
+      "k": 3,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-144",
+    "config": {
+      "n": 10000,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-145",
+    "config": {
+      "n": 10000,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-146",
+    "config": {
+      "n": 10000,
+      "k": 4,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-147",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-148",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-149",
+    "config": {
+      "n": 10000,
+      "k": 5,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-150",
+    "config": {
+      "n": 10000,
+      "k": 6,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-151",
+    "config": {
+      "n": 10000,
+      "k": 6,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-152",
+    "config": {
+      "n": 10000,
+      "k": 6,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-153",
+    "config": {
+      "n": 10000,
+      "k": 8,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 17
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-154",
+    "config": {
+      "n": 10000,
+      "k": 8,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 29
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  },
+  {
+    "id": "v3-half-155",
+    "config": {
+      "n": 10000,
+      "k": 8,
+      "epsilon": "1/2",
+      "kind": "clusters",
+      "c": 25,
+      "rho": "1/4096",
+      "seed": 43
+    },
+    "groups": [
+      "fixed_communities"
+    ]
+  }
+]

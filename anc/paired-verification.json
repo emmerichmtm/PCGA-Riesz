@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "exact_checks": 157,
+  "random_instances": 16,
+  "tests": [
+    "exact optimum pair bounds",
+    "independent rational cell floors",
+    "original-objective approximation",
+    "every one-swap local optimum on tiny inputs",
+    "deterministic input generation"
+  ]
+}

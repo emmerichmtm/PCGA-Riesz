@@ -1,0 +1,912 @@
+{
+  "purpose": "Exact reproducible teaching example and finite verification, not a speed benchmark.",
+  "compact_run": {
+    "points": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0"
+      ],
+      [
+        "7",
+        "2"
+      ],
+      [
+        "7",
+        "6"
+      ],
+      [
+        "3",
+        "8"
+      ],
+      [
+        "-1",
+        "6"
+      ],
+      [
+        "-3",
+        "3"
+      ],
+      [
+        "2",
+        "3"
+      ],
+      [
+        "-1/512",
+        "-1/512"
+      ],
+      [
+        "3",
+        "4097/512"
+      ]
+    ],
+    "n": 10,
+    "k": 5,
+    "s": 2,
+    "dimension": 2,
+    "epsilon_requested": "1/2",
+    "epsilon_used": "1/2",
+    "mode": "compact",
+    "indexing": "zero-based input indices",
+    "branch": "exchange_grid",
+    "center_count": 8,
+    "centers": [
+      0,
+      3,
+      5,
+      9,
+      1,
+      2,
+      6,
+      7
+    ],
+    "traversal": [
+      {
+        "center": 0,
+        "insertion_radius_squared": null
+      },
+      {
+        "center": 3,
+        "insertion_radius_squared": "85"
+      },
+      {
+        "center": 5,
+        "insertion_radius_squared": "37"
+      },
+      {
+        "center": 9,
+        "insertion_radius_squared": "5244929/262144"
+      },
+      {
+        "center": 1,
+        "insertion_radius_squared": "16"
+      },
+      {
+        "center": 2,
+        "insertion_radius_squared": "13"
+      },
+      {
+        "center": 6,
+        "insertion_radius_squared": "13"
+      },
+      {
+        "center": 7,
+        "insertion_radius_squared": "13"
+      }
+    ],
+    "last_insertion_radius_squared": "13",
+    "actual_cover_radius_squared": "1/131072",
+    "harmonic": "761/280",
+    "potential_bound": "1522/455",
+    "dyadic_separation_scale": "1/2",
+    "cell_side": "1/64",
+    "grid_origin": [
+      "-1/128",
+      "-1/128"
+    ],
+    "cells": [
+      {
+        "key": [
+          -192,
+          192
+        ],
+        "representative": 6,
+        "members": [
+          6
+        ]
+      },
+      {
+        "key": [
+          -64,
+          384
+        ],
+        "representative": 5,
+        "members": [
+          5
+        ]
+      },
+      {
+        "key": [
+          0,
+          0
+        ],
+        "representative": 0,
+        "members": [
+          0,
+          8
+        ]
+      },
+      {
+        "key": [
+          128,
+          192
+        ],
+        "representative": 7,
+        "members": [
+          7
+        ]
+      },
+      {
+        "key": [
+          192,
+          512
+        ],
+        "representative": 4,
+        "members": [
+          4,
+          9
+        ]
+      },
+      {
+        "key": [
+          256,
+          0
+        ],
+        "representative": 1,
+        "members": [
+          1
+        ]
+      },
+      {
+        "key": [
+          448,
+          128
+        ],
+        "representative": 2,
+        "members": [
+          2
+        ]
+      },
+      {
+        "key": [
+          448,
+          384
+        ],
+        "representative": 3,
+        "members": [
+          3
+        ]
+      }
+    ],
+    "replacement_map": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      0,
+      4
+    ],
+    "representatives": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "M": 8,
+    "selected": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ],
+    "energy": "110421302865713/413429256648720",
+    "certificate": [
+      "110421302865713/620143884973080",
+      "110421302865713/413429256648720"
+    ],
+    "subsets_evaluated": 56
+  },
+  "paper_run": {
+    "points": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "4",
+        "0"
+      ],
+      [
+        "7",
+        "2"
+      ],
+      [
+        "7",
+        "6"
+      ],
+      [
+        "3",
+        "8"
+      ],
+      [
+        "-1",
+        "6"
+      ],
+      [
+        "-3",
+        "3"
+      ],
+      [
+        "2",
+        "3"
+      ],
+      [
+        "-1/512",
+        "-1/512"
+      ],
+      [
+        "3",
+        "4097/512"
+      ]
+    ],
+    "n": 10,
+    "k": 5,
+    "s": 2,
+    "dimension": 2,
+    "epsilon_requested": "1/2",
+    "epsilon_used": "1/2",
+    "mode": "paper",
+    "indexing": "zero-based input indices",
+    "branch": "small_instance_exact",
+    "representatives": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "M": 10,
+    "selected": [
+      2,
+      3,
+      6,
+      8,
+      9
+    ],
+    "energy": "37694418904735924806064180035831341795963349371515937/141167337752436718602793918768844942105195544650870800",
+    "certificate": [
+      "37694418904735924806064180035831341795963349371515937/141167337752436718602793918768844942105195544650870800",
+      "37694418904735924806064180035831341795963349371515937/141167337752436718602793918768844942105195544650870800"
+    ],
+    "subsets_evaluated": 252
+  },
+  "audit": {
+    "original_subsets": 252,
+    "original_optimal_sets": [
+      [
+        2,
+        3,
+        6,
+        8,
+        9
+      ]
+    ],
+    "original_optimum": "37694418904735924806064180035831341795963349371515937/141167337752436718602793918768844942105195544650870800",
+    "snapped_optimum": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ],
+    "snapped_energy": "110421302865713/413429256648720",
+    "observed_ratio": "43677235805768094072014866399515540334151531524003558715/43666291842643373464624919415793764374780971436231819019",
+    "exchange_example_x": 2,
+    "exchange_example_others": [
+      3,
+      6,
+      8,
+      9
+    ],
+    "exchange_example_free_centers": [
+      5,
+      1,
+      2,
+      7
+    ],
+    "all_one_swap_local_minima": [
+      [
+        2,
+        3,
+        6,
+        8,
+        9
+      ]
+    ]
+  },
+  "tests": {
+    "all_assertions_passed": true,
+    "additional_cases": 78,
+    "additional_original_subsets": 11446,
+    "invalid_inputs_rejected": 4,
+    "cases": [
+      {
+        "n": 3,
+        "k": 2,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 3
+      },
+      {
+        "n": 3,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 3
+      },
+      {
+        "n": 4,
+        "k": 3,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 4
+      },
+      {
+        "n": 4,
+        "k": 3,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 4
+      },
+      {
+        "n": 5,
+        "k": 4,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 5
+      },
+      {
+        "n": 5,
+        "k": 4,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 5
+      },
+      {
+        "n": 6,
+        "k": 5,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 6,
+        "k": 5,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 7,
+        "k": 6,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 7
+      },
+      {
+        "n": 7,
+        "k": 6,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 7
+      },
+      {
+        "n": 8,
+        "k": 2,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 28
+      },
+      {
+        "n": 8,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 28
+      },
+      {
+        "n": 9,
+        "k": 3,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 84
+      },
+      {
+        "n": 9,
+        "k": 3,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 84
+      },
+      {
+        "n": 10,
+        "k": 4,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 210
+      },
+      {
+        "n": 10,
+        "k": 4,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 210
+      },
+      {
+        "n": 11,
+        "k": 5,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 462
+      },
+      {
+        "n": 11,
+        "k": 5,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 462
+      },
+      {
+        "n": 12,
+        "k": 6,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 924
+      },
+      {
+        "n": 12,
+        "k": 6,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 924
+      },
+      {
+        "n": 3,
+        "k": 2,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 3
+      },
+      {
+        "n": 3,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 3
+      },
+      {
+        "n": 4,
+        "k": 4,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 4,
+        "k": 4,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 5,
+        "k": 2,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 10
+      },
+      {
+        "n": 5,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 10
+      },
+      {
+        "n": 6,
+        "k": 5,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 6,
+        "k": 5,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 7,
+        "k": 6,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 7
+      },
+      {
+        "n": 7,
+        "k": 6,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 7
+      },
+      {
+        "n": 8,
+        "k": 2,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 28
+      },
+      {
+        "n": 8,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 28
+      },
+      {
+        "n": 9,
+        "k": 3,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 84
+      },
+      {
+        "n": 9,
+        "k": 3,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 84
+      },
+      {
+        "n": 10,
+        "k": 4,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 210
+      },
+      {
+        "n": 10,
+        "k": 4,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 210
+      },
+      {
+        "n": 11,
+        "k": 5,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 462
+      },
+      {
+        "n": 11,
+        "k": 5,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 462
+      },
+      {
+        "n": 12,
+        "k": 6,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 924
+      },
+      {
+        "n": 12,
+        "k": 6,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 924
+      },
+      {
+        "n": 3,
+        "k": 2,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 3
+      },
+      {
+        "n": 3,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 3
+      },
+      {
+        "n": 4,
+        "k": 2,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 4,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 6
+      },
+      {
+        "n": 5,
+        "k": 4,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 5
+      },
+      {
+        "n": 5,
+        "k": 4,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 5
+      },
+      {
+        "n": 6,
+        "k": 5,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 6,
+        "k": 5,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 6
+      },
+      {
+        "n": 7,
+        "k": 6,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 7
+      },
+      {
+        "n": 7,
+        "k": 6,
+        "mode": "compact",
+        "branch": "small_instance_exact",
+        "subsets": 7
+      },
+      {
+        "n": 8,
+        "k": 2,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 28
+      },
+      {
+        "n": 8,
+        "k": 2,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 28
+      },
+      {
+        "n": 9,
+        "k": 3,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 84
+      },
+      {
+        "n": 9,
+        "k": 3,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 84
+      },
+      {
+        "n": 10,
+        "k": 4,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 210
+      },
+      {
+        "n": 10,
+        "k": 4,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 210
+      },
+      {
+        "n": 11,
+        "k": 5,
+        "mode": "paper",
+        "branch": "exchange_grid",
+        "subsets": 462
+      },
+      {
+        "n": 11,
+        "k": 5,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 462
+      },
+      {
+        "n": 12,
+        "k": 6,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 924
+      },
+      {
+        "n": 12,
+        "k": 6,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 924
+      },
+      {
+        "n": 0,
+        "k": 0,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 0,
+        "k": 0,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 1,
+        "k": 0,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 1,
+        "k": 0,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 1,
+        "k": 1,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 1,
+        "k": 1,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 2,
+        "k": 2,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 2,
+        "k": 2,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 10,
+        "k": 0,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 10,
+        "k": 0,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 10,
+        "k": 1,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 10
+      },
+      {
+        "n": 10,
+        "k": 1,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 10
+      },
+      {
+        "n": 10,
+        "k": 10,
+        "mode": "paper",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 10,
+        "k": 10,
+        "mode": "compact",
+        "branch": "trivial",
+        "subsets": 1
+      },
+      {
+        "n": 10,
+        "k": 5,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 252,
+        "scaled": true
+      },
+      {
+        "n": 10,
+        "k": 5,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 252,
+        "scaled": true
+      },
+      {
+        "n": 10,
+        "k": 5,
+        "mode": "paper",
+        "branch": "small_instance_exact",
+        "subsets": 252,
+        "scaled": true
+      },
+      {
+        "n": 10,
+        "k": 5,
+        "mode": "compact",
+        "branch": "exchange_grid",
+        "subsets": 252,
+        "scaled": true
+      }
+    ]
+  }
+}

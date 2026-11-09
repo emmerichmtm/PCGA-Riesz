@@ -1,0 +1,12 @@
+{
+  "spec_version": 1,
+  "process": {
+    "compiler": "pdflatex"
+  },
+  "sources": [
+    {
+      "filename": "main_arxiv_v1.tex",
+      "usage": "toplevel"
+    }
+  ]
+}

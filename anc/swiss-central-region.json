@@ -1,0 +1,8 @@
+{
+  "definition": "within 30 km Euclidean LV95 distance of the area centroid of the full January 2026 national polygon",
+  "centroid_lv95_m": [
+    2660172.277984686,
+    1183654.625895182
+  ],
+  "radius_m": 30000
+}

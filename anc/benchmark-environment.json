@@ -1,0 +1,21 @@
+{
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "numpy": "1.26.4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "cpu_count": 16,
+  "denominator": 1048576,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "clock": "time.perf_counter",
+  "search_budget": {
+    "max_M": 300,
+    "max_subsets": 10000000000,
+    "seconds": 30
+  },
+  "sequential": true,
+  "arithmetic": "Exact int64 geometry; Fraction search; outward binary64 intervals with exact Fraction fallback; zero tolerance"
+}

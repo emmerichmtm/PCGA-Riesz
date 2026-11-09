@@ -1,0 +1,284 @@
+{
+  "scale": {
+    "n": 156,
+    "status": {
+      "complete": 84,
+      "skipped_search_budget": 69,
+      "timeout": 3
+    },
+    "accuracy_frequency": {
+      "1/2": 153,
+      "1": 3
+    },
+    "million_tight": [
+      10,
+      10,
+      10
+    ],
+    "million_uniform": [
+      644670,
+      644760,
+      645259
+    ],
+    "million_seconds": [
+      0.3766264000441879,
+      0.003258800017647445
+    ],
+    "accuracy": {
+      "1/2": [
+        10,
+        10,
+        10
+      ],
+      "1": [
+        10,
+        10,
+        10
+      ]
+    },
+    "widths": {
+      "1/4096": [
+        10,
+        10,
+        10
+      ],
+      "1/1024": [
+        10,
+        10,
+        10
+      ],
+      "1/256": [
+        90,
+        90,
+        90
+      ]
+    },
+    "communities": {
+      "5": [
+        89215,
+        89271,
+        89315
+      ],
+      "10": [
+        10,
+        10,
+        10
+      ],
+      "25": [
+        25,
+        25,
+        25
+      ],
+      "50": [
+        50,
+        50,
+        50
+      ]
+    },
+    "cap_columns": [
+      "energy",
+      "gain_percent",
+      "prep_ms",
+      "search_ms",
+      "extra_ms",
+      "total_ms"
+    ],
+    "caps": {
+      "0": [
+        2.9132107853725957,
+        0.0,
+        2.985549974255264,
+        3.7777500110678375,
+        0.0,
+        31.953350000549108
+      ],
+      "1": [
+        2.908611953990521,
+        0.05230832197652134,
+        2.985549974255264,
+        3.7777500110678375,
+        2.937599958386272,
+        40.50970001844689
+      ],
+      "2": [
+        2.908611953990521,
+        0.05230832197652134,
+        2.985549974255264,
+        3.7777500110678375,
+        5.481400003191084,
+        50.48805003752932
+      ],
+      "3": [
+        2.908611953990521,
+        0.05230832197652134,
+        2.985549974255264,
+        3.7777500110678375,
+        5.481400003191084,
+        50.48805003752932
+      ],
+      "5": [
+        2.908611953990521,
+        0.05230832197652134,
+        2.985549974255264,
+        3.7777500110678375,
+        5.481400003191084,
+        50.48805003752932
+      ],
+      "10": [
+        2.908611953990521,
+        0.05230832197652134,
+        2.985549974255264,
+        3.7777500110678375,
+        5.481400003191084,
+        50.48805003752932
+      ]
+    },
+    "earliest_final_sweep": {
+      "1": 78,
+      "2": 6
+    },
+    "maximum_gain": 0.35346827318969215,
+    "versus_heuristic": {
+      "lower": 26,
+      "equal": 47,
+      "higher": 11
+    },
+    "tiny_optima": [
+      7,
+      9
+    ]
+  },
+  "paired": {
+    "cases": 114,
+    "arrays": 99,
+    "status": {
+      "pair_count": {
+        "complete": 60,
+        "skipped_search_budget": 12,
+        "occupancy_only": 42
+      },
+      "packing": {
+        "complete": 60,
+        "skipped_search_budget": 12,
+        "occupancy_only": 42
+      },
+      "incumbent": {
+        "complete": 60,
+        "skipped_search_budget": 12,
+        "occupancy_only": 42
+      },
+      "exchange": {
+        "complete": 48,
+        "skipped_search_budget": 24,
+        "occupancy_only": 42
+      },
+      "hybrid": {
+        "complete": 60,
+        "skipped_search_budget": 12,
+        "occupancy_only": 42
+      }
+    },
+    "exchange_vs_incumbent": {
+      "equal": 22,
+      "higher": 80,
+      "lower": 12
+    },
+    "small": [
+      18,
+      18,
+      16,
+      40,
+      16
+    ],
+    "k512": {
+      "lattice": [
+        99704,
+        95533,
+        83390,
+        16458,
+        16458
+      ],
+      "irregular": [
+        99701,
+        95511,
+        84091,
+        54751,
+        54751
+      ]
+    }
+  },
+  "fresh": [
+    {
+      "n": 20,
+      "kind": "uniform",
+      "seed": 17,
+      "M": 20,
+      "gain": 0.0,
+      "optimum_attained": true
+    },
+    {
+      "n": 20,
+      "kind": "uniform",
+      "seed": 29,
+      "M": 20,
+      "gain": 0.0,
+      "optimum_attained": true
+    },
+    {
+      "n": 20,
+      "kind": "uniform",
+      "seed": 43,
+      "M": 20,
+      "gain": 0.0,
+      "optimum_attained": true
+    },
+    {
+      "n": 20,
+      "kind": "clusters",
+      "seed": 17,
+      "M": 8,
+      "gain": 0.034625529857736696,
+      "optimum_attained": true
+    },
+    {
+      "n": 20,
+      "kind": "clusters",
+      "seed": 29,
+      "M": 8,
+      "gain": 0.01897244421365145,
+      "optimum_attained": false
+    },
+    {
+      "n": 20,
+      "kind": "clusters",
+      "seed": 43,
+      "M": 8,
+      "gain": 0.036255709184119245,
+      "optimum_attained": true
+    },
+    {
+      "n": 1000,
+      "kind": "clusters",
+      "seed": 17,
+      "M": 10,
+      "gain": 0.05869798565626665,
+      "optimum_attained": null
+    },
+    {
+      "n": 1000,
+      "kind": "clusters",
+      "seed": 29,
+      "M": 10,
+      "gain": 0.023805447313767755,
+      "optimum_attained": null
+    },
+    {
+      "n": 1000,
+      "kind": "clusters",
+      "seed": 43,
+      "M": 10,
+      "gain": 0.038664756398229194,
+      "optimum_attained": null
+    }
+  ]
+}

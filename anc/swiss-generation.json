@@ -1,0 +1,20 @@
+{
+  "seed": 20261107,
+  "n": 5403,
+  "original": 1801,
+  "added": 3602,
+  "extra_parents": [
+    "P1415",
+    "P0297"
+  ],
+  "min_offset_m": 75.13321502504735,
+  "max_offset_m": 249.92999019725505,
+  "min_distance_from_directory_m": 15.0,
+  "min_new_to_other_site_m": 16.0312195418814,
+  "directory_coordinates_checked": 3307712,
+  "all_inside_country": true,
+  "input_sha256": "141570a8559da8a513a5b2f7404755e33058b31069d60041652d014b47d332aa",
+  "output_sha256": "4d4b4dba020208d80bd99178c4957c51fa854919d0c776b6d503e00cb9f54b78",
+  "address_zip_sha256": "4e9e1280090253366680217a86fdd4f2428900a4c867af414f9bbbfbca582404",
+  "boundary_gpkg_sha256": "1f122cb7a06f2d312a84b7c0a91116348ba907054d487f0a70b9d2302984e6fc"
+}
