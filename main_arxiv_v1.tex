@@ -1,9 +1,7 @@
-% arXiv version 1. Compile twice with pdflatex. All figures and references are inline.
-% Beside this file only PRIMEarxiv.sty is project-specific. anc/ contains code and data.
+% Compile with pdfLaTeX. All figures and references are inline.
 \documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-% Use the authors' PRIME title and section design with the article's 12-point text.
 \let\articleNormal\normalsize \let\articleSmall\small \let\articleFoot\footnotesize
 \let\articleLarge\large \let\articleLARGE\Large
 \usepackage{PRIMEarxiv}
@@ -21,17 +19,19 @@
 \usetikzlibrary{arrows.meta,shapes.geometric}
 \usepackage[section]{placeins}
 \usepackage{hyperref}
+\newcommand{\PaperTitle}{Parameterized Complexity and Geometric Approximation of Riesz Energy Subset Selection}
 \hypersetup{colorlinks=true,linkcolor=blue!42!black,citecolor=blue!42!black,
   urlcolor=blue!42!black,bookmarksnumbered=true,
-  pdftitle={Parameterized Complexity and Geometric Approximation of Riesz-Energy Selection},
+  pdftitle={\PaperTitle},
   pdfauthor={Michael Emmerich and Soumen Atta},
-  pdfsubject={Parameterized approximation, geometric subset selection and Riesz energy}}
+  pdfsubject={Parameterized approximation, geometric subset selection and Riesz energy},
+  pdfkeywords={Riesz energy, subset selection, computational geometry, parameterized approximation}}
 \urlstyle{same}
 \setlength{\emergencystretch}{2em}
 \setlength{\parindent}{1.2em}
 \setlength{\parskip}{2pt plus 1pt}
 \lhead{\small\itshape M. Emmerich and S. Atta}
-\rhead{\small\itshape Approximation of Riesz-energy selection}
+\rhead{\small\itshape Riesz energy subset selection}
 \cfoot{\thepage}
 \setcounter{tocdepth}{2}
 \newcommand{\R}{\mathbb R}
@@ -49,32 +49,31 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \numberwithin{equation}{section}
-\title{Parameterized Complexity and Geometric Approximation of Riesz Energy Subset Selection}
+\title{\PaperTitle}
 \author{\href{https://orcid.org/0000-0002-7342-2090}{Michael Emmerich}\qquad
         \href{https://orcid.org/0000-0001-7492-5602}{Soumen Atta}\\[4pt]
         \normalfont Faculty of Information Technology\\
-        \normalfont University of Jyv\"askyl\"a, Finland\\[5pt]
-        }
+        \normalfont University of Jyv\"askyl\"a, Finland}
 \begin{document}
 \maketitle
 \begin{abstract}
 Selecting $k$ sites of minimum inverse-square Riesz energy is polynomial on a line but NP-hard
 in the plane. Adapting the proxy lemma of Ceccarello et al.\ gives an efficient parameterized
 approximation scheme (EPAS) for fixed Euclidean dimension and Riesz exponent $s>0$.
-We sharpen its geometric guarantee. Instead of charging a close pair to the energy of a whole selection, we bound the cost
-incident to one site by averaging over feasible replacements among $2k$ farthest-first centres.
+We sharpen the resulting bound by averaging the interaction cost of one selected site over
+feasible replacements among $2k$ farthest-first centers.
 In the plane at $s=2$, this improves the representative bound from
 $O(k^2\log(2k)/\varepsilon^2)$ for a packing estimate of total energy to
 $O(k\log(2k)/\varepsilon^2)$. We construct rational planar instances where every optimum
 has a pair at distance $\Theta(r/\sqrt{\log k})$, matching the separation bound in terms of
-the last centre's insertion distance $r$. A $(1+\varepsilon)$ approximation on $n$
+the last center's insertion distance $r$. A $(1+\varepsilon)$ approximation on $n$
 rational planar sites takes $O(nk+n\log n)+(C\log(2k)/\varepsilon^2)^k$ operations of
-polynomial bit cost. The observed representative count $M$ determines the enumeration cost:
-on a million sites, the exchange grid left 252 five-site subsets for clustered data but about
+polynomial bit cost. The observed count $M$ of representatives gives the search size $\binom{M}{k}$.
+On a million sites, the exchange grid left 252 five-site subsets for clustered data and about
 $9.3\times10^{26}$ for uniform data. The argument extends to bounded-doubling metrics and to
-compact domains with effective geometric routines, including filled simple polygons. At $s=2$ exact decision
-on metrics with distances $1,2$ is W[1]-complete in $k$; a gap shrinking with $k$ rules out a
-deterministic EPAS in unrestricted metrics unless $\mathrm{FPT}=\mathsf{W[1]}$.
+compact domains with effective geometric routines, including filled simple polygons. At $s=2$, exact decision
+on metrics with nonzero distances in $\{1,2\}$ is W[1]-complete in $k$. A gap shrinking with
+$k$ rules out a deterministic EPAS on unrestricted metrics unless $\mathrm{FPT}=\mathsf{W[1]}$.
 
 \end{abstract}
 \keywords{Riesz energy \and subset selection \and computational geometry \and
@@ -113,9 +112,9 @@ pair, but in the critical planar case this can cost an entire factor of $k$ in t
 representative count.
 
 Our exchange argument controls only the energy \emph{incident to one selected site}.
-Choose $2k$ farthest-first centres, and let $r$ be the last insertion distance. The other $k-1$
-sites of an optimum each exclude at most one centre at distance strictly below $r/2$. At any of
-the remaining centres the replacement is feasible, so the selected site's incident energy is at
+Choose $2k$ farthest-first centers, and let $r$ be the last insertion distance. The other $k-1$
+sites of an optimum each exclude at most one center at distance strictly below $r/2$. At any of
+the remaining centers the replacement is feasible, so the selected site's incident energy is at
 most the average replacement cost. Packing bounds this average by a harmonic sum. Consequently,
 for $d=s=2$ every optimum has minimum separation $\Omega(r/\sqrt{\log(2k)})$. This is the right
 order: in a lattice square with a remote pair, the two remote sites must both be selected even
@@ -149,8 +148,8 @@ Farthest-first covering goes back to Gonzalez~\cite[Section 2]{gonzalez1985}. Fo
 et al.~\cite[Section 5, Lemma 5]{ceccarello2017} gives a set of at most
 $k(8/\varepsilon')^D$ sites in doubling dimension $D$, with a proxy within
 $\varepsilon'\rho/2$ of each point of any $k$-subset. A best-packing selection costs at most
-$N\rho^{-s}$, $N=\binom{k}{2}$, so every pair of a Riesz optimum is at distance at least
-$\rho/N^{1/s}$. Taking $\varepsilon'=\varepsilon/(2qN^{1/s})$, $q=\lceil\max(1,s)\rceil$, gives
+$N_k\rho^{-s}$, where $N_k=\binom{k}{2}$, so every pair of a Riesz optimum is at distance
+at least $\rho/N_k^{1/s}$. Taking $\varepsilon'=\varepsilon/(2qN_k^{1/s})$, $q=\lceil\max(1,s)\rceil$, gives
 distinct proxies for the optimal sites and the pairwise guarantee of Lemma~\ref{lem:rounding}:
 first bound the optimum's separation, then choose the proxy displacement to be small relative to it.
 Ceccarello et al. do not state a Riesz-energy theorem; this argument uses their single-block
@@ -192,9 +191,9 @@ The paper separates three questions: how much a point of an unknown optimum can 
 (Sections~\ref{sec:extensions} and~\ref{sec:metric-barrier}), and how much search
 the resulting certificate actually leaves (Section~\ref{sec:experiments}).
 Appendix~\ref{app:symbols} collects the notation. For a concrete reading of the
-proof, the ten-site example in Appendix~\ref{sec:epas-gallery} follows a single
-optimal point through the exchange and rounding steps. Appendix~\ref{app:reproduce}
-explains how to reproduce the figures, energies and representative counts.
+proof, Appendix~\ref{sec:epas-gallery} follows a single optimal site through exchange and rounding.
+The code and data are available at \url{https://github.com/emmerichmtm/PCGA-Riesz}.
+Appendix~\ref{app:reproduce} gives the archived inputs and reproduction commands.
 
 \section{Model and computational assumptions}\label{sec:model}
 The $n$ candidates are distinct. Handle $k\le1$ and $k=n$ directly; replace $\varepsilon>1$ by
@@ -257,7 +256,7 @@ Maintaining nearest-center distances takes $O(nk)$ operations. Squared rational 
 for all comparisons.
 
 \begin{lemma}[Replacement potential and separation]\label{lem:exchange}
-Let a feasible set $P$ contain the $2k$ mutually $r$-separated centres, and let $S$ be a
+Let a feasible set $P$ contain the $2k$ mutually $r$-separated centers, and let $S$ be a
 cardinality-$k$ subset admitting no improving one-point replacement from $P$. For every $x\in S$,
 \begin{equation}\label{eq:local-potential}
  \sum_{y\in S\setminus\{x\}}\|x-y\|^{-s}
@@ -304,7 +303,7 @@ approximation bound.
 For every sufficiently large $k$ there is a finite rational $P_k\subset\mathbb R^2$ such that,
 for any start and tie-breaking of farthest-first traversal, every one-swap local optimum
 for $E_2$, and hence every global optimum, has minimum distance
-$\Theta(r_{2k}/\sqrt{\log k})$. Here $r_{2k}$ is the last insertion distance among $2k$ centres;
+$\Theta(r_{2k}/\sqrt{\log k})$. Here $r_{2k}$ is the last insertion distance among $2k$ centers;
 the constants are absolute.
 \end{theorem}
 The construction consists of a square of unit lattice sites and two sites far from that square
@@ -321,7 +320,7 @@ Once a separation bound is known, no knowledge of the optimal sites themselves
 is needed. We choose the grid first and keep any one feasible site per occupied
 cell. The next lemma shows why this cannot merge two sites of an optimum.
 \begin{lemma}[Rounding an optimum]\label{lem:rounding}
-Suppose every pair of an optimum has distance at least a known $\sigma>0$. Let $q\ge\max\{1,s\}$
+Suppose every pair of sites in an optimal selection is at distance at least a known $\sigma>0$. Let $q\ge\max\{1,s\}$
 be a fixed integer, choose $\sigma/2<\widehat\sigma\le\sigma$, and grid $\R^d$ into half-open
 cubes of side $h=\varepsilon\widehat\sigma/(4qd)$. Retain one feasible point from each cell
 intersecting the feasible set. The resulting $Q$ contains a $(1+\varepsilon)$-approximate
@@ -407,7 +406,7 @@ That radius again cancels from the count, yielding the third row. Enumeration
 uses $\binom Mk\le(eM/k)^k$.
 \end{proof}
 \begin{table}[t]\centering\small
-\caption{Explicit planar certificates and bounds. The first two rows are baselines derived here from packing and proxy reasoning, not Riesz theorems attributed to prior papers. $H_j=\sum_{i=1}^j1/i$. $B$ is an upper bound on every optimum pair contribution.}\label{tab:comparison}
+\caption{Explicit planar certificates and bounds. The first two rows bound the total energy of the farthest-first selection. The third bounds the energy incident to one site of an optimum. $H_j=\sum_{i=1}^j1/i$. $B$ is an upper bound on every optimum pair contribution.}\label{tab:comparison}
 \begin{tabular}{@{}lll@{}}\toprule
 Certificate & $B$ & Representative upper bound\\\midrule
 Pair count & $N_k/r_k^2$ & $O(k^3/\varepsilon^2)$\\
@@ -436,7 +435,7 @@ The certified cell side $h$ sets the scale at which clustering matters. If each 
 lies in a distinct single cell, then $M=c$. When $c$ is close to $k$, this leaves few extra
 representatives. A cluster of diameter below $h$ can still meet up to $2^d$ cells at grid
 boundaries. For $n>2k$ the exchange grid occupies at least $2k$ cells because its cell diameter is
-smaller than the separation $r$ of its $2k$ centres. With fewer than $2k$ tight groups, traversal
+smaller than the separation $r$ of its $2k$ centers. With fewer than $2k$ tight groups, traversal
 must enter some group twice and can produce a very fine grid. The hybrid in
 Section~\ref{sec:comparison} can give $M=k$, leaving a single reduced choice. In a uniformly
 sampled region with $G$ cells of positive sampling probability, $M\le\min\{n,G\}$. For a fixed
@@ -462,7 +461,7 @@ In a finite metric the sites are listed, but there is no coordinate grid; a
 separated net takes its place.
 \begin{corollary}[Compact feasible domains]\label{cor:domains}
 Let $D\subset\mathbb R^d$ be compact. Suppose one can compute $2k$ feasible
-centres at mutual distance at least $r>0$ whose closed radius-$r$ balls cover
+centers at mutual distance at least $r>0$ whose closed radius-$r$ balls cover
 $D$, and can test a half-open grid cell for intersection with $D$ and return a
 feasible witness when it intersects. In the exact-operation model, retaining
 one witness per intersecting cell gives a $(1+\varepsilon)$-approximation with
@@ -473,7 +472,7 @@ includes scale computation, cell enumeration, and witness queries.
 \begin{proof}
 On $D^k$ extend the energy to $+\infty$ at collisions. It is lower semicontinuous
 and some feasible tuple has finite energy, so its minimum is attained at distinct
-points. The given centres are feasible replacements in Lemma~\ref{lem:exchange},
+points. The given centers are feasible replacements in Lemma~\ref{lem:exchange},
 which uses only their separation. Lemma~\ref{lem:rounding} applies to the
 witness in each optimal point's cell. Enumerate the grid keys in the axis-aligned
 bounding boxes of the $2k$ covering balls, remove repeated keys, and query the
@@ -484,7 +483,7 @@ $O(k\log(2k)/\varepsilon^2)$ cells, followed by at most
 $(C\log(2k)/\varepsilon^2)^k$ operations for subset search.
 \end{proof}
 In a closed simple polygon with $m$ vertices, a continuous farthest-first step
-with $j$ sites maximizes the empty-circle radius subject to its centre lying in
+with $j$ sites maximizes the empty-circle radius subject to its center lying in
 the polygon. Chew and Drysdale's Voronoi algorithm uses $O(mj+j\log(2j))$
 geometric operations for this step~\cite{chew1986}. A triangulation supplies
 cell witnesses by clipping triangles to the closed cell and testing the excluded
@@ -494,28 +493,28 @@ the supplied certificate and witness routines.
 
 \begin{theorem}[Finite metrics of bounded doubling dimension]\label{thm:doubling}
 Let $P$ be an $n$-point metric in which every closed radius-$R$ ball is
-covered by at most $2^\lambda$ closed radius-$R/2$ balls with centres in $P$.
+covered by at most $2^\lambda$ closed radius-$R/2$ balls with centers in $P$.
 For fixed $\lambda\ge1$ and $s>0$, an exact distance oracle and the stated
 power and comparison primitives suffice for a deterministic EPAS. It retains
 \[
  M=O_{\lambda,s}\!\left(k(H_{2k}^{(s/\lambda)})^{\lambda/s}/
  \varepsilon^\lambda\right)
 \]
-input sites. Centre and net construction take $O(nk+nM)$ distance queries.
+input sites. Center and net construction take $O(nk+nM)$ distance queries.
 Enumeration takes $O(k^2\binom Mk)$ distance and arithmetic operations.
 \end{theorem}
 \begin{proof}
 For $n\le2k$ enumerate the input directly. Otherwise use its $2k$ farthest-first
-centres. For an $a$-separated set in a closed radius-$R$ ball, if $R<a/2$
+centers. For an $a$-separated set in a closed radius-$R$ ball, if $R<a/2$
 there is at most one point. If $R\ge a/2$, iterate the doubling cover
 $\ell=\lfloor\log_2(2R/a)\rfloor+1$ times. Each resulting ball has diameter
 strictly below $a$, including when $2R/a$ is a power of two. The number of
 points is at most $2^{\lambda\ell}\le(4R/a)^\lambda$.
 
 Fix an optimal site $x$ and its $k-1$ companions. Their open radius-$r/2$ balls
-exclude at most $k-1$ centres. For each companion the $j$th nearest remaining
-centre has distance $\rho_j\ge r/2$, so $j\le(4\rho_j/r)^\lambda$.
-Averaging the exchange inequalities over the at least $k+1$ remaining centres,
+exclude at most $k-1$ centers. For each companion the $j$th nearest remaining
+center has distance $\rho_j\ge r/2$, so $j\le(4\rho_j/r)^\lambda$.
+Averaging the exchange inequalities over the at least $k+1$ remaining centers,
 as in Lemma~\ref{lem:exchange}, bounds the incident potential by
 $4^sr^{-s}H_{2k}^{(s/\lambda)}$. Thus every optimal pair has distance at least
 $\delta=r/[4(H_{2k}^{(s/\lambda)})^{1/s}]$.
@@ -604,8 +603,8 @@ Rational Euclidean plane & In W[P]; exact FPT status not settled here & EPAS, Co
 \end{tabular}
 \end{table}
 
-The guaranteed relative gap $3/N_k$ tends to zero. Indeed, on the hard subclass \emph{every}
-$k$-subset is a 4-approximation: its energy lies between $N_k/4$ and $N_k$. The reduction
+The guaranteed relative gap $3/N_k$ tends to zero. On the hard subclass every feasible
+$k$-subset is a 4-approximation because its energy lies between $N_k/4$ and $N_k$. The reduction
 therefore does not exclude a fixed-factor approximation, or a scheme whose input-size exponent
 depends on accuracy. Nor does it establish W[1] membership for exact selection in all rational
 metrics. The hard family has no uniform doubling bound: for an edgeless graph the radius-two
@@ -649,13 +648,12 @@ candidates before exact comparison. Appendix~\ref{app:exact-search} details the 
 safeguards; Appendix~\ref{sec:paired-protocol} describes 157 validation checks.
 
 \paragraph*{Dispersion across Swiss settlements.}
-Figure~\ref{fig:swiss} selects $k=10$ facilities from 5,403 synthetic sites.
-The clouds follow 26 cantonal seats and ten rural settlements; a singleton near
-the eastern border represents Müstair. Candidates were made denser within
-settlements before constructing either grid. At $\varepsilon=1$, the exchange
+Figure~\ref{fig:swiss} shows $k=10$ facilities chosen from 5,403 synthetic sites.
+The point clouds follow 26 cantonal seats and ten rural settlements. A single candidate near the
+eastern border represents Müstair. At $\varepsilon=1$, the exchange
 grid retains 3,365 sites (cell side 256~m). The hybrid instead retains one
 representative per occupied 1,024~m cell, leaving 706 sites ($86.93\%$ removed).
-This leaves $\binom{706}{10}\approx7.95\times10^{21}$ possible selections. A diameter bound ruled
+Even after compression there are $\binom{706}{10}\approx7.95\times10^{21}$ possible selections. A diameter bound ruled
 out taking two sites from one locality. Lower bounds on interactions between localities left only
 69 sets of ten localities for further exact search.
 \begin{figure}[tbp]\centering
@@ -1697,9 +1695,8 @@ on a filled simple polygon, a point from each cell that meets the polygon suffic
 same finite search, even though there are infinitely many possible locations. A net gives
 the analogous result for finite metrics of bounded doubling dimension.
 
-Generic proxies already give a route to an EPAS. What exchange adds is a sharper answer to
-\emph{how far can an optimal point be moved safely?} Averaging its incident energy over feasible
-replacements improves the planar inverse-square representative bound from
+Generic proxies already give an EPAS. The exchange argument sharpens the worst-case estimate
+for the distance an optimal site can move under rounding. Averaging the incident energy over feasible replacements improves the planar inverse-square representative bound from
 $O(k^2\log(2k)/\varepsilon^2)$ for the total-energy packing estimate to
 $O(k\log(2k)/\varepsilon^2)$. The lattice-and-pair construction shows that the logarithm in
 the separation estimate is unavoidable at this cover scale. It leaves room for adaptive
@@ -1715,12 +1712,13 @@ on the same data at larger $k$, but none of those gains produced a newly complet
 experiments. The Swiss instance illustrates a different opportunity: the incumbent grid and
 locality pruning made a ten-site solve possible, and eight within-cell moves attained the
 independently verified full optimum. The general certificate allowed a factor of two.
-Bridging that gap is a promising next step: a lower bound computed from the occupied cells or
-a sparse interaction proxy could certify, instance by instance, the accuracy that these
-solutions already achieve.
+A lower bound computed from the occupied cells or from a sparse interaction proxy could certify
+such accuracy on an individual instance without solving the full problem.
 
 \section*{Use of AI tools}
-OpenAI ChatGPT/Codex assisted with proofreading and with implementing/testing algorithms, running computational experiments, and preparing figures; all technical claims, algorithmic ideas, references, and interpretations were by the authors.
+OpenAI ChatGPT/Codex assisted with proofreading, implementing and testing the algorithms,
+running computational experiments, and preparing the figures. The authors take responsibility
+for the technical claims, algorithmic ideas, references and interpretations.
 
 \clearpage
 \appendix
@@ -1749,15 +1747,15 @@ $E_s(S),\ \OPT_s(P,k)$ & Energy summed over unordered pairs and the minimum ener
 $N_k,\ \Delta(S)$ & Number $\binom{k}{2}$ of selected pairs and shortest distance in $S$.\\
 $\varepsilon,\ L$ & Relative tolerance ($0<\varepsilon\le1$) and total binary input length, including rational accuracy.\\[3pt]
 \multicolumn{2}{@{}l}{\textbf{Exchange and geometric rounding}}\\
-$C_j,\ r_j$ & First $j$ farthest-first centres and distance of centre $j$ to its nearest predecessor ($j\ge2$). The proof uses $C=C_{2k}$ and $r=r_{2k}$.\\
-$A,\ T_x,\ \Psi_A(z)$ & Companions $S\setminus\{x\}$, centres at distance at least $r/2$ from all of $A$, and the interaction of $z$ with $A$.\\
+$C_j,\ r_j$ & First $j$ farthest-first centers and distance of center $j$ to its nearest predecessor ($j\ge2$). The proof uses $C=C_{2k}$ and $r=r_{2k}$.\\
+$A,\ T_x,\ \Psi_A(z)$ & Companions $S\setminus\{x\}$, centers at distance at least $r/2$ from all of $A$, and the interaction of $z$ with $A$.\\
 $H_m^{(p)},\ H_m$ & Generalized harmonic sum $\sum_{j=1}^m j^{-p}$ and its value at $p=1$. $\overline H$ denotes a computable upper bound.\\
 $\delta,\ \sigma,\ \widehat\sigma$ & Separation proved by exchange, any valid lower bound on optimal pair distances, and a rounding scale in $(\sigma/2,\sigma]$.\\
 $q,\ h,\ o$ & Fixed integer $q\ge\max\{1,s\}$, grid side $\varepsilon\widehat\sigma/(4qd)$, and common physical grid origin.\\
 $Q,\ M,\ T$ & Representatives, their number $M=|Q|$, and a budget of complete subset evaluations, to compare with $\binom Mk$.\\
 $\lambda,\ \eta$ & Upper bound on doubling dimension and covering radius of the greedy representative net.\\[3pt]
 \multicolumn{2}{@{}l}{\textbf{Bounds and experiments}}\\
-$U,\ \overline U$ & In the certificate comparison: energy of the $k$-centre incumbent and an upper bound on that energy.\\
+$U,\ \overline U$ & In the certificate comparison: energy of the $k$-center incumbent and an upper bound on that energy.\\
 $B_X,\ B_H$ & Upper bounds on a single optimal pair contribution: exchange and hybrid, with $B_H=\min\{\overline U,B_X\}$ in the plane.\\
 $V,\ U_t$ & Exact reduced optimum and original energy after $t$ within-cell refinement sweeps ($U_0=V$). The certified interval is $[V/(1+\varepsilon),U_t]$.\\
 $c,\ G$ & Number of clusters and number of positive-probability cells in the fixed-grid occupancy model.\\
@@ -1800,11 +1798,11 @@ Let $a=2\lceil\sqrt{k}\rceil$, and take the lattice square $G=\{0,\ldots,a-1\}^2
 Adjoin $u=(k^2,0)$ and $v=(k^2+t,0)$, where $t$ is a dyadic rational in
 $[A/\sqrt{\log k},2A/\sqrt{\log k}]$. The absolute constant $A$ is chosen below. For all
 sufficiently large $k$, $t<1$ and the remote sites are at distance $\Omega(k^2)$ from $G$.
-There are at least $4k$ lattice sites. Until $2k$ centres have been chosen some untouched lattice
-site is at distance at least one from every centre; hence $r_{2k}\ge1$. At least $2k-2$ centres
+There are at least $4k$ lattice sites. Until $2k$ centers have been chosen some untouched lattice
+site is at distance at least one from every center; hence $r_{2k}\ge1$. At least $2k-2$ centers
 are in $G$. Partition the lattice sites into $\lceil\sqrt{k}\rceil^2$ disjoint blocks of
-$2$ by $2$ sites. For all sufficiently large $k$ there are fewer blocks than lattice centres.
-Two of these $r_{2k}$-separated centres lie in the same block, so $r_{2k}\le\sqrt2$.
+$2$ by $2$ sites. For all sufficiently large $k$ there are fewer blocks than lattice centers.
+Two of these $r_{2k}$-separated centers lie in the same block, so $r_{2k}\le\sqrt2$.
 Neither argument uses the initial site or tie-breaking.
 
 Consider a $k$-set omitting at least one of $u,v$. It selects $m\ge k-1$ lattice sites.
@@ -1942,7 +1940,7 @@ rational reference, and \path{anc/benchmarks/code/epas_refine_v2.py}, an acceler
 implementation for the bounded dyadic data used here. The reference handles arbitrary rational
 coordinates and small-cardinality branches. The vectorized path is intended for validated planar
 arrays and the stated $2k$-cover regime; the small walkthrough additionally uses the proved $2k-2$
-variant. Both compute the insertion radius rather than substituting the final covering radius.
+variant. Both use the last insertion distance to set the grid scale.
 Original points are grouped by cell and remain available after reduction.
 
 \paragraph{Exact integer geometry.}
@@ -1961,9 +1959,9 @@ per occupied cell. No rounded distance determines a center, cell, or certificate
 
 \paragraph{Exact reduced search.}
 Let $w_{ij}\in\mathbb Q_{>0}$ be a representative pair weight and $A=2^{48}$. The search uses
-integer lower weights $\ell_{ij}=\lfloor Aw_{ij}\rfloor$ and an integer upper bound $U=\lceil
-AV\rceil$ from an exactly evaluated incumbent. A deterministic greedy completion supplies only
-that feasible incumbent. For a partial selection with lower cost $c$, let $b_i$ be the lower
+integer lower weights $\ell_{ij}=\lfloor Aw_{ij}\rfloor$. If $S_{\rm inc}$ is the best
+feasible set found so far, the pruning threshold is $U=\lceil A E_2(S_{\rm inc})\rceil$.
+A deterministic greedy completion gives an initial feasible set. For a partial selection with lower cost $c$, let $b_i$ be the lower
 attachment cost of available candidate $i$, and let $q$ positions remain. If $q\ge2$, assign
 \[
  a_i=2b_i+\text{the sum of the }q-1\text{ smallest }\ell_{ij}
@@ -2014,7 +2012,7 @@ For a filled simple polygon with $m$ vertices, start at a polygon vertex.
 With $j$ sites Chew and Drysdale give $O(mj+j\log(2j))$ geometric operations,
 or $O(mj)$ with the nearest-site Voronoi diagram supplied~\cite{chew1986}.
 Summing gives $O(mk^2+k^2\log(2k))$ operations for the certificate.
-The feasible location is the centre of the empty circle. A boundary site is
+The feasible location is the center of the empty circle. A boundary site is
 eligible even when its circle extends outside the polygon. These bounds are
 for a simple polygon with its boundary included.
 
@@ -2072,9 +2070,9 @@ loses at most another factor of two in the net radius. Bit costs then depend
 on the oracle output lengths and the cost of answering a query.
 
 \section{Worked examples: seeing the grid at three densities}\label{app:walk}
-The ten-site instance lets us identify every feasible replacement. The two
-hundred-site instances then contrast spreading additional candidates through
-the covered region with putting them in tight groups. All three keep $k=5$.
+The ten-site instance lets us identify every feasible replacement. The two instances with
+$n=100$ use the same initial sites and illustrate how the placement of the other candidates
+changes grid occupancy. All three use $k=5$.
 
 \subsection{Five of ten: from cover to selection}\label{sec:epas-gallery}
 Figures~\ref{fig:epas-cover-run}--\ref{fig:epas-grid-run} illustrate $d=s=2$, $n=10$, $k=5$, and
@@ -2101,8 +2099,8 @@ throughout. Default \texttt{paper} mode follows the $2k$ construction; \texttt{c
 Proposition~\ref{prop:epas-compact-cover}. It maintains nearest squared distances, constructs
 dyadic scales by binary lengths, sorts integer cell keys, and tabulates only representative
 weights. Input order breaks ties and chooses cell representatives. A translated global grid has
-the same proof, with keys $\lfloor(p-o)/h\rfloor$. The solver never computes the original optimum
-or runs local search.
+the same proof, with keys $\lfloor(p-o)/h\rfloor$. The solver optimizes over the representatives. A separate exhaustive search provides
+the full-input optimum for comparison.
 
 The ten input points, in order, are as follows, with $t=1/512$:
 \[
@@ -2116,41 +2114,6 @@ The two deliberate near pairs require magnification. Starting at $p_1$, the trac
 \mathcal C=(p_1,p_4,p_6,p_{10},p_2,p_3,p_7,p_8),\qquad
 r^2=13,\quad H_8=761/280,\quad B=1522/455.
 \]
-The insertion squared distances are
-$85,\allowbreak37,\allowbreak5244929/262144,\allowbreak16,\allowbreak13,\allowbreak13,\allowbreak13$.
-The final covering radius is actually $\sqrt{2}/512$, but the proof uses the \emph{last insertion
-radius} $r=\sqrt{13}$. The dyadic choice $\widehat\delta=1/2$ satisfies
-$B\widehat\delta^2\le1<B(2\widehat\delta)^2$, giving $h=1/64$. With origin $o=(-h/2,-h/2)$,
-exactly two cells contain pairs; the first-point rule leaves $Q=\{p_1,\ldots,p_8\}$.
-
-\begin{center}\small
-\begin{tabular}{@{}lll@{}}\toprule
-Stage & Exact result & Role\\\midrule
-Cover & $8$ centers, $r^2=13$ & Certifies the rounding scale\\
-Grid & $10\to8$ candidates & Merges only the two near pairs\\
-Representative search & $\binom85=56$ subsets & Produces the returned solution\\
-Independent audit & $\binom{10}5=252$ subsets & Checks the unknown original optimum\\
-Certificate & $[2V/3,V]$ & Valid without the exhaustive audit\\\bottomrule
-\end{tabular}
-\end{center}
-The returned set is $S_Q=\{p_1,p_3,p_4,p_5,p_7\}$, with
-\[
-V=\frac{110421302865713}{413429256648720}\approx 0.267086330.
-\]
-The independent verifier finds the unique original optimum $S^\star=\{p_3,p_4,p_7,p_9,p_{10}\}$,
-of energy $0.267019408$ approximately. Its cellwise replacement equals $S_Q$ here, giving the
-nonzero-error ratio $1.000250627<1.5$. This equality of the replacement and returned set is not
-needed in general. The $2k$ mode instead takes the exact $252$-subset shortcut.
-
-From \path{anc/walkthroughs/}, run the independent audit with
-\begin{quote}
-\verb|python epas_gallery_run.py|
-\end{quote}
-This runs both the compact and standard modes, then enumerates the original
-ten-site problem independently. The audit writes \path{epas_gallery_results.json}; all checks pass
-on this run, $78$ additional cases covering trivial cardinalities, signs, scales, translations,
-and accuracy endpoints, and four invalid inputs. The inline galleries use this exact trace. These
-checks establish finite reproducibility, not running-time performance.
 \begin{figure}[!htbp]\centering
 \definecolor{epasblue}{RGB}{0,114,178}
 \definecolor{epasgreen}{RGB}{0,130,105}
@@ -2284,13 +2247,52 @@ gexcluded/.style={draw=epasorange!70,densely dashed,line width=.5pt,fill=epasora
 \node[gfree] at (0,-.55) {}; \node[anchor=west] at (.20,-.55) {free center (exchange panel)};
 \end{tikzpicture}
 
-\caption[Five-of-ten EPAS: cover and exchange scale]{Cover and separation for the actual ten-point run, with $k=5$ and $\varepsilon=1/2$.
-(a) The ten input candidates; the two pairs at $A$ and $B$ are unresolved at this global scale and are magnified in Figure~\ref{fig:epas-grid-run}. No positions are displaced for visibility.
-(b) The first four farthest-first centers; the numerals give traversal order, not input indices.
-(c) All ten candidates, all eight centers in the certified $2k-2$ variant (blue rings), and the independently verified optimum $S^\star=\{p_3,p_4,p_7,p_9,p_{10}\}$ (orange diamonds), with true radius-$r$ covering disks, $r=\sqrt{13}$. The center order is $p_1,p_4,p_6,p_{10},p_2,p_3,p_7,p_8$; a cover is distinct from a five-point selection.
-(d) The proof mechanism for $x=p_3$. The four orange open-radius-$r/2$ neighborhoods around $S^\star\setminus\{x\}$ exclude four centers, leaving $p_2,p_3,p_6,p_8$ free (purple triangles). All eight centers remain blue rings. The outlined diamond denotes $x$; it is itself free. The algorithm does not know $S^\star$ or perform these exchanges: averaging the feasible replacement potentials proves the separation scale used by the grid. Distinct shapes also identify each role in greyscale.}
+\caption[Five of ten sites: cover and exchange]{Cover and exchange for ten sites, $k=5$ and
+$\varepsilon=1/2$. (a) The pairs at $A$ and $B$ are magnified in Figure~\ref{fig:epas-grid-run}.
+(b) Numerals give the order of the first four farthest-first centers. (c) Blue rings mark the
+eight centers of the $2k-2$ cover, with disks of radius $r=\sqrt{13}$. Orange diamonds mark
+the optimum $\{p_3,p_4,p_7,p_9,p_{10}\}$. (d) To replace $x=p_3$ (outlined diamond),
+exclude the open radius-$r/2$ disks of its four companions. The four free centers
+$p_2,p_3,p_6,p_8$ are marked by purple triangles. Their average replacement cost bounds
+the energy incident to $x$.}
 \label{fig:epas-cover-run}
 \end{figure}
+
+The insertion squared distances are
+$85,\allowbreak37,\allowbreak5244929/262144,\allowbreak16,\allowbreak13,\allowbreak13,\allowbreak13$.
+The final covering radius is actually $\sqrt{2}/512$, but the proof uses the \emph{last insertion
+radius} $r=\sqrt{13}$. The dyadic choice $\widehat\delta=1/2$ satisfies
+$B\widehat\delta^2\le1<B(2\widehat\delta)^2$, giving $h=1/64$. With origin $o=(-h/2,-h/2)$,
+exactly two cells contain pairs; the first-point rule leaves $Q=\{p_1,\ldots,p_8\}$.
+
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}\toprule
+Stage & Exact result & Role\\\midrule
+Cover & $8$ centers, $r^2=13$ & Certifies the rounding scale\\
+Grid & $10\to8$ candidates & Merges only the two near pairs\\
+Representative search & $\binom85=56$ subsets & Produces the returned solution\\
+Independent audit & $\binom{10}5=252$ subsets & Checks the unknown original optimum\\
+Certificate & $[2V/3,V]$ & Valid without the exhaustive audit\\\bottomrule
+\end{tabular}
+\end{center}
+The returned set is $S_Q=\{p_1,p_3,p_4,p_5,p_7\}$, with
+\[
+V=\frac{110421302865713}{413429256648720}\approx 0.267086330.
+\]
+The independent verifier finds the unique original optimum $S^\star=\{p_3,p_4,p_7,p_9,p_{10}\}$,
+of energy $0.267019408$ approximately. Its cellwise replacement equals $S_Q$ here, giving the
+nonzero-error ratio $1.000250627<1.5$. This equality of the replacement and returned set is not
+needed in general. The $2k$ mode instead takes the exact $252$-subset shortcut.
+
+From \path{anc/walkthroughs/}, run the independent audit with
+\begin{quote}
+\verb|python epas_gallery_run.py|
+\end{quote}
+This runs both the compact and standard modes, then enumerates the original
+ten-site problem independently. It writes \path{epas_gallery_results.json} and checks
+78 additional cases covering cardinalities, coordinate signs, scales, translations and
+accuracy endpoints, as well as four invalid inputs.
+
 \begin{figure}[!htbp]\centering
 \definecolor{epasblue}{RGB}{0,114,178}
 \definecolor{epasgreen}{RGB}{0,130,105}
@@ -2422,24 +2424,25 @@ gexcluded/.style={draw=epasorange!70,densely dashed,line width=.5pt,fill=epasora
 \node[gfree] at (0,-.55) {}; \node[anchor=west] at (.20,-.55) {free center (exchange panel)};
 \end{tikzpicture}
 
-\caption[Five-of-ten EPAS: grid, replacement, and output]{Grid compression and the returned five-point selection on the same input.
-(a) Two magnified windows of the \emph{actual} grid, of side $h=1/64$ and origin $(-1/128,-1/128)$. A central square is one half-open cell; $A$ contains $p_1,p_9$ and $B$ contains $p_5,p_{10}$. Magnification is uniform within each window; the remaining six occupied cells are singletons. The grid is not drawn at global scale, where it would be illegible.
-(b) The first input candidate in each cell is retained (green square). Arrows show $p_9\mapsto p_1$ and $p_{10}\mapsto p_5$ for the independently audited optimum (orange diamonds). The other three optimum points map to themselves. This illustrates the injective replacement used in the proof; the algorithm simply forms $Q$ and searches it.
-(c) The eight representatives; a discarded candidate may coincide visually with its representative at this scale.
-(d) Exact enumeration of the $\binom85=56$ subsets returns $\{p_1,p_3,p_4,p_5,p_7\}$, with full energy $V\approx 0.267086330$. Pale segments show all ten selected-pair interactions. The independent $252$-subset check gives $\OPT\approx 0.267019408$ and $V/\OPT\approx 1.000250627$; the guaranteed interval is $[2V/3,V]$. This small illustrative run is not a performance benchmark.}
+\caption[Five of ten sites: grid and selection]{Rounding and search on the same ten sites.
+(a) The two magnified cells have side $h=1/64$ and belong to the grid with origin
+$(-1/128,-1/128)$. Cell $A$ contains $p_1,p_9$ and cell $B$ contains $p_5,p_{10}$.
+(b) The first site in each cell is retained (green square). Two sites of the optimum
+(orange diamonds) move under rounding, $p_9\mapsto p_1$ and $p_{10}\mapsto p_5$.
+The other three stay fixed. (c) The grid retains eight representatives.
+(d) Searching their $\binom85=56$ five-site subsets returns $\{p_1,p_3,p_4,p_5,p_7\}$.
+Segments show its ten interacting pairs. The certified interval is $[2V/3,V]$.
+An independent exhaustive search gives $V/\OPT\approx1.000250627$.}
 \label{fig:epas-grid-run}
 \end{figure}
 
 \FloatBarrier
 
-% END REPRODUCIBLE EPAS GALLERY
-
 
 \subsection{A hundred sites spread across the same cover}\label{sec:epas-hundred}
 Keep the first ten candidates and append $90$ points spread across the covered region, preserving
 the eight-center traversal, $k=5$, $d=s=2$, and $\varepsilon=1/2$.
-Figure~\ref{fig:epas-hundred-supp} plots this deterministic construction without jitter; it is not
-a random sample or a timing benchmark.
+Figure~\ref{fig:epas-hundred-supp} plots each candidate at its generated coordinates.
 
 Let $c_1,\ldots,c_8$ be the ordered centers above, and $r_j^2$ their squared insertion distances.
 Form the finite pool of points
@@ -2458,91 +2461,6 @@ input. The prefix inequalities prevent added points from outranking prescribed c
 favors the smaller original index. Induction preserves the traversal. The admissible region is
 contained in the covering-disk union; both the last insertion radius and final cover radius are
 $\sqrt{13}$.
-
-The potential bound $B=1522/455$, dyadic scale $1/2$, grid side $h=1/64$, and origin
-$(-1/128,-1/128)$ are unchanged. Recomputing all cell keys yields $96$ singleton cells and the two
-cells $\{p_1,p_9\}$ and $\{p_5,p_{10}\}$. Thus
-\[
- Q=\{p_1,\ldots,p_8,p_{11},\ldots,p_{100}\},\qquad |Q|=98.
-\]
-The standard uniform grid therefore gives little compression on this spread-out input. A fixed
-cover does not imply a fixed occupied-cell count. The comparison is
-\begin{center}\small
-\begin{tabular}{@{}rrrrr@{}}\toprule
-$n$ & $k$ & Original $k$-subsets & $|Q|$ & Representative $k$-subsets\\\midrule
-$10$ & $5$ & $252$ & $8$ & $56$\\
-$100$ & $5$ & $75\,287\,520$ & $98$ & $67\,910\,864$\\\bottomrule
-\end{tabular}
-\end{center}
-These are compact-EPAS search-space sizes. The larger run tabulates $4753$ representative weights
-and uses exact pruning instead of visiting every subset; no measured speedup is asserted.
-
-\paragraph{Recomputed selection and certificate.}
-Exact optimization on $Q$ returns
-\[
- S_Q=\{p_{12},p_{19},p_{30},p_{33},p_{87}\},\qquad
- V=\frac{19091545433244524790715084}{138473515345884275211104385}
-   \approx0.137871458.
-\]
-The EPAS certificate is $[2V/3,V]$. A separate exact search on \emph{all 100 original candidates}
-returns the same optimum, certifying $[V,V]$ and error $V/\OPT_{100}-1=0$ for this instance. This
-audit does not construct the grid or improve the scheme's worst-case $1.5$ guarantee or asymptotic
-search bound.
-
-For the exchange illustration choose $x=p_{12}$. The seven free centers are
-\[
- T_x=\{p_1,p_2,p_3,p_4,p_6,p_7,p_8\};
-\]
-only $p_{10}$ lies within distance strictly less than $r/2$ of one of
-$p_{19},p_{30},p_{33},p_{87}$. In contrast to the ten-point example, no selected optimum point is
-a cover center. Free centers are determined by these exclusion disks, not by being outside $S_Q$.
-The figure plots all centers even when excluded and marks free ones by a second, distinct symbol.
-
-\paragraph{Certified exact pruning.}
-The optional \texttt{--search branch\_bound} routine changes only the exact search on the retained
-set, leaving the EPAS geometry and default enumerator intact. For rational weights $w_{ij}>0$, set
-$K=2^{48}$ and $a_{ij}=\lfloor K w_{ij}\rfloor$. Maintain an exactly evaluated feasible incumbent
-of energy $U$. In a node with partial selection $A$, admissible remaining indices $R$, and
-$q=k-|A|$ still to select, put
-\[
- c=\sum_{\{i,j\}\subseteq A}a_{ij},\qquad
- b_i=\sum_{j\in A}a_{ij}\quad(i\in R).
-\]
-For $q\ge2$, let $t_i$ sum the $q-1$ smallest values $a_{ij}$ over $j\in R\setminus\{i\}$ and let
-$D$ sum the $q$ smallest values $2b_i+t_i$ over $i\in R$. For any completion $T\subseteq R$,
-$|T|=q$,
-\[
- 2K E_2(A\cup T)\ \ge\ 2c+\sum_{i\in T}(2b_i+t_i)
- \ \ge\ 2c+D.
-\]
-Indeed the attachment terms are charged twice, while each internal completion edge is charged once
-at each endpoint; choosing the cheapest available incident edges only lowers these charges.
-Consequently $2c+D>2\lceil KU\rceil$ safely discards the node. For $q=1$, use $c+\min_{i\in
-R}b_i>\lceil KU\rceil$. Positivity also allows a candidate to be discarded if its partial lower
-cost already exceeds $\lceil KU\rceil$. The recursion follows increasing indices, so every
-remaining subset is either visited or safely pruned. Complete surviving selections and incumbent
-updates use exact rational energy, not rounded weights. Thus termination certifies the exact
-optimum; the integer scaling affects pruning strength, not correctness. Greedy completions supply
-feasible initial incumbents only.
-
-The representative search visits $29\,539$ partial-tree nodes, and the separate all-candidate
-audit visits $32\,039$; these include partial selections and are not full-subset enumeration
-counts. Both searches use the same exact routine on different domains. Independent exhaustive
-rational minimization validates the pruning implementation on $111$ weighted test cases totaling
-$12\,009$ subsets, including tiny weights below $1/K$ and tied optima. The ten-point audit and its
-$78$ additional geometric cases also pass.
-
-From \path{anc/walkthroughs/}, run the following three commands. The first
-constructs the spread instance, solves it, and audits the full-input optimum;
-the second checks the pruning rule against exhaustive search; the third draws the figure.
-\begin{quote}
-\verb|python epas_100_run.py|\\
-\verb|python check_exact_subset_search.py|\\
-\verb|python render_epas_spread.py|
-\end{quote}
-JSON records the full rational input and trace; assertions verify the traversal, geometry, $98$
-representatives, and equality of both optima. Maximum replacement squared distance is $1/131072$;
-all added points represent themselves.
 
 \begin{figure}[!htbp]\centering
 \definecolor{epasblue}{RGB}{0,114,178}
@@ -3176,11 +3094,102 @@ spexcluded/.style={draw=epasorange!65,densely dashed,line width=.45pt,fill=epaso
 \node[spchosen] at (9.15,0) {};\node[anchor=west] at (9.32,0) {selected point};
 \end{tikzpicture}
 
-\caption[Spread-out hundred-point EPAS run]{The spread-out $n=100$, $k=5$ run, with the same eight centers, $r=\sqrt{13}$, and $h=1/64$.
-(a) All 100 candidates at their computed global positions, the actual covering disks, and the returned five points (orange diamonds), independently certified optimal.
-(b) All 98 representatives (green squares) over the original candidates, all eight centers (blue rings), and the seven free centers (purple triangles) for $x=p_{12}$. The four dashed radius-$r/2$ disks are centered at $p_{19},p_{30},p_{33},p_{87}$; only $p_{10}$ is excluded. Thus free centers need not be selected points. (c) The only nonsingleton cells, $\{p_1,p_9\}$ and $\{p_5,p_{10}\}$, shown at a common magnification with their actual offsets and replacement arrows. No selected optimum point is discarded. (d) The returned optimum among the representatives, with all ten selected-pair interactions. Every global panel plots all 100 original candidates; only the two original near pairs are unresolved there. All panels use the stored coordinates without jitter; the two local windows use the explicitly different scale $h$. This instance illustrates the conservative grid and the exchange geometry, not a large compression or a running-time improvement.}
+\caption[One hundred sites spread across the cover]{One hundred sites with $k=5$, eight
+cover centers, $r=\sqrt{13}$ and $h=1/64$. (a) The disks cover all candidates. Orange
+diamonds mark the five sites of the independently verified optimum. (b) Green squares mark
+the 98 representatives and blue rings the eight centers. For $x=p_{12}$, the four dashed
+disks about its companions exclude only $p_{10}$, leaving seven free centers (purple
+triangles). (c) The only cells containing two sites are $\{p_1,p_9\}$ and
+$\{p_5,p_{10}\}$, shown at a common magnification. All five optimal sites are retained.
+(d) The selected sites and their ten pair interactions.}
 \label{fig:epas-hundred-supp}
 \end{figure}
+
+The potential bound $B=1522/455$, dyadic scale $1/2$, grid side $h=1/64$, and origin
+$(-1/128,-1/128)$ are unchanged. Recomputing all cell keys yields $96$ singleton cells and the two
+cells $\{p_1,p_9\}$ and $\{p_5,p_{10}\}$. Thus
+\[
+ Q=\{p_1,\ldots,p_8,p_{11},\ldots,p_{100}\},\qquad |Q|=98.
+\]
+The standard uniform grid therefore gives little compression on this spread-out input. A fixed
+cover does not imply a fixed occupied-cell count. The comparison is
+\begin{center}\small
+\begin{tabular}{@{}rrrrr@{}}\toprule
+$n$ & $k$ & Original $k$-subsets & $|Q|$ & Representative $k$-subsets\\\midrule
+$10$ & $5$ & $252$ & $8$ & $56$\\
+$100$ & $5$ & $75\,287\,520$ & $98$ & $67\,910\,864$\\\bottomrule
+\end{tabular}
+\end{center}
+These are compact-EPAS search-space sizes. The larger run tabulates $4753$ representative weights
+and uses exact pruning instead of visiting every subset; no measured speedup is asserted.
+
+\paragraph{Selection and certificate.}
+Exact optimization on $Q$ returns
+\[
+ S_Q=\{p_{12},p_{19},p_{30},p_{33},p_{87}\},\qquad
+ V=\frac{19091545433244524790715084}{138473515345884275211104385}
+   \approx0.137871458.
+\]
+The EPAS certificate is $[2V/3,V]$. A separate exact search on \emph{all 100 original candidates}
+returns the same optimum, certifying $[V,V]$ and error $V/\OPT_{100}-1=0$ for this instance. This
+audit does not construct the grid or improve the scheme's worst-case $1.5$ guarantee or asymptotic
+search bound.
+
+For the exchange illustration choose $x=p_{12}$. The seven free centers are
+\[
+ T_x=\{p_1,p_2,p_3,p_4,p_6,p_7,p_8\};
+\]
+only $p_{10}$ lies within distance strictly less than $r/2$ of one of
+$p_{19},p_{30},p_{33},p_{87}$. In contrast to the ten-point example, no selected optimum point is
+a cover center. Free centers are determined by these exclusion disks, not by being outside $S_Q$.
+The figure plots all centers even when excluded and marks free ones by a second, distinct symbol.
+
+\paragraph{Certified exact pruning.}
+The optional \texttt{--search branch\_bound} routine changes only the exact search on the retained
+set, leaving the EPAS geometry and default enumerator intact. For rational weights $w_{ij}>0$, set
+$K=2^{48}$ and $a_{ij}=\lfloor K w_{ij}\rfloor$. Maintain an exactly evaluated feasible incumbent
+of energy $U$. In a node with partial selection $A$, admissible remaining indices $R$, and
+$q=k-|A|$ still to select, put
+\[
+ c=\sum_{\{i,j\}\subseteq A}a_{ij},\qquad
+ b_i=\sum_{j\in A}a_{ij}\quad(i\in R).
+\]
+For $q\ge2$, let $t_i$ sum the $q-1$ smallest values $a_{ij}$ over $j\in R\setminus\{i\}$ and let
+$D$ sum the $q$ smallest values $2b_i+t_i$ over $i\in R$. For any completion $T\subseteq R$,
+$|T|=q$,
+\[
+ 2K E_2(A\cup T)\ \ge\ 2c+\sum_{i\in T}(2b_i+t_i)
+ \ \ge\ 2c+D.
+\]
+Indeed the attachment terms are charged twice, while each internal completion edge is charged once
+at each endpoint; choosing the cheapest available incident edges only lowers these charges.
+Consequently $2c+D>2\lceil KU\rceil$ safely discards the node. For $q=1$, use $c+\min_{i\in
+R}b_i>\lceil KU\rceil$. Positivity also allows a candidate to be discarded if its partial lower
+cost already exceeds $\lceil KU\rceil$. The recursion follows increasing indices, so every
+remaining subset is either visited or safely pruned. Complete surviving selections and incumbent
+updates use exact rational energy, not rounded weights. Thus termination certifies the exact
+optimum; the integer scaling affects pruning strength, not correctness. Greedy completions supply
+feasible initial incumbents only.
+
+The representative search visits $29\,539$ partial-tree nodes, and the separate all-candidate
+audit visits $32\,039$; these include partial selections and are not full-subset enumeration
+counts. Both searches use the same exact routine on different domains. Independent exhaustive
+rational minimization validates the pruning implementation on $111$ weighted test cases totaling
+$12\,009$ subsets, including tiny weights below $1/K$ and tied optima. The ten-point audit and its
+$78$ additional geometric cases also pass.
+
+From \path{anc/walkthroughs/}, run the following three commands. The first
+constructs the spread instance, solves it, and audits the full-input optimum;
+the second checks the pruning rule against exhaustive search; the third draws the figure.
+\begin{quote}
+\verb|python epas_100_run.py|\\
+\verb|python check_exact_subset_search.py|\\
+\verb|python render_epas_spread.py|
+\end{quote}
+JSON records the full rational input and trace; assertions verify the traversal, geometry, $98$
+representatives, and equality of both optima. Maximum replacement squared distance is $1/131072$;
+all added points represent themselves.
+
 
 \FloatBarrier
 
@@ -3196,8 +3205,8 @@ exactly 100 distinct dyadic candidates; geometrically they represent 26 local gr
 five-site cities, two two-site groups, and six singleton sites. No geographic dataset or demand
 model is asserted.
 
-The strict inequalities preserve the first eight farthest-first choices. Recompute the full
-ten-center traversal rather than reusing its scale: the extra choices are $p_{15}$ and $p_{18}$.
+The strict inequalities preserve the first eight farthest-first choices. The full
+ten-center traversal next selects $p_{15}$ and $p_{18}$.
 The rational implementation gives $h=1/64$ and $M=26$. The representative optimum is
 $\{p_5,p_{16},p_{41},p_{51},p_{61}\}$ with energy $V\approx0.159096904279$. An exact search over
 all candidates gives $\{p_{10},p_{18},p_{42},p_{55},p_{63}\}$, and $V/\OPT\approx1.000596624154$.
@@ -3370,7 +3379,14 @@ occupied cells here with 98 in the spread-out construction of Appendix~\ref{sec:
 \node[cityrep] at (5.7,0) {};\node[anchor=west] at (5.85,0) {representative};
 \node[citychosen] at (8.05,0) {};\node[anchor=west] at (8.2,0) {selected site};
 \end{tikzpicture}
-\caption{A synthetic facility-dispersion map with $n=100$, $k=5$, and $\varepsilon=1/2$. (a) All candidates at their actual coordinates: the original ten sites plus five nearby sites in each of 18 spread-out cities. The ten farthest-first centers and their radius-$r$ cover are blue; purple marks the nine centers free for replacing $p_{10}$ in the independently certified optimum (orange). Small city clouds overlap at this scale. (b) One entire occupied cell, magnified by $1/h$, with all five candidates; its representative $p_{16}$ moves to $p_{18}$ during refinement. The exact grid has $h=1/64$ and $M=26$. Reduced search has relative error $0.05966\%$; refinement reaches the independently computed optimum. These are observed errors, separate from the certified factor $1.5$.}\label{fig:hundred-clusters}
+\caption{One hundred sites in tight groups, $k=5$ and $\varepsilon=1/2$.
+(a) The ten initial candidates and 18 groups of five share a cover with ten farthest-first
+centers (blue). Purple triangles mark the nine centers free to replace $p_{10}$ in the
+optimum (orange). (b) A magnified cell of side $h=1/64$ contains five candidates.
+Refinement moves its representative $p_{16}$ to $p_{18}$. Across the input $M=26$.
+The reduced solution is $0.05966\%$ above the full optimum, and the refined solution
+attains it. The approximation guarantee is a factor of $1.5$.}
+\label{fig:hundred-clusters}
 \end{figure}
 
 \section{Reproducing the Swiss settlement experiment}\label{sec:swiss-density}
@@ -3386,11 +3402,11 @@ offline without downloading any original address data.
 The clouds follow the built-up areas of the 26 cantonal seats and ten rural settlements.
 We used swisstopo's 5 November 2026 building-address directory and the detailed
 January 2026 national polygon~\cite{swissaddresses,swissboundary}.
-Within each source locality we combined occupied 200~m squares by eight-neighbour
+Within each source locality we combined occupied 200~m squares by eight-neighbor
 adjacency and kept the component with the most distinct current address positions.
-Giving each occupied hectare equal weight, we stratified its centres into 50 groups
+Giving each occupied hectare equal weight, we stratified its centers into 50 groups
 by farthest-first initialization and Lloyd iterations, then used the address nearest
-each fitted centre. The rural pool excluded municipalities already represented and
+each fitted center. The rural pool excluded municipalities already represented and
 required 100--2,000 residents, at most 50 residents per square kilometre, and at least
 50 occupied hectares in the component of the municipality's most represented postal
 locality. We included the eligible settlement nearest the national area centroid, then
@@ -3402,7 +3418,7 @@ was optional.
 All 1,801 seed positions were displaced by 35--90~m, rounded to whole metres,
 and checked against the national boundary and the directory. The released, fixed seed
 cloud contains no address identifiers. To increase local density, we generated two
-neighbours of each seed in the 36 settlement clouds and a third for two seeds drawn
+neighbors of each seed in the 36 settlement clouds and a third for two seeds drawn
 without replacement, leaving Müstair isolated. Proposals were uniform by area in a
 75--250~m annulus around their seed before rounding. We rejected proposals outside
 the annulus or country, within 15~m of another accepted site, or within 15~m of any
@@ -3417,7 +3433,7 @@ Set $d=s=2$, $k=10$ and $\varepsilon=1$. Start farthest-first traversal at the
 first CSV row, breaking ties by input index. The twentieth insertion has radius
 $r=39.558$~km; after that insertion the covering radius is $37.954$~km.
 Use the exact values of $B_X=16H_{20}/r^2$ and of the energy $U$ of the first ten
-centres, with $r$ expressed in metres. Numerically $B_X=3.67857\times10^{-8}$
+centers, with $r$ expressed in metres. Numerically $B_X=3.67857\times10^{-8}$
 and $U=3.42232\times10^{-9}$. The hybrid uses $B_H=\min(B_X,U)$. For each
 certificate take the largest dyadic power $z$ with $Bz^2\le1$ and set $h=z/16$.
 The grids have the common physical origin $(-128,-128)$~m. For the half-open cells,
@@ -3550,9 +3566,9 @@ representatives. At $c=10,25,50$ the same rule retained one site per group on al
 These exchange counts use origin $(-h/2,-h/2)$ at the exchange width.
 
 On the same five-group inputs, we can see exactly when $M$ reaches $k$. The five unit-lattice
-centres each carry a square cloud of half-width $1/4096$. The hybrid gives $h_H=1/128$ on all
+centers each carry a square cloud of half-width $1/4096$. The hybrid gives $h_H=1/128$ on all
 three seeds. At origin $(0,0)$ every group straddles two grid lines and occupies four cells.
-Translating the origin to $(-1/256,-1/256)$ places every group inside one cell. The $2k$-centre
+Translating the origin to $(-1/256,-1/256)$ places every group inside one cell. The $2k$-center
 exchange width is $h_X=1/524288$. The translation is an integer multiple of $h_X$ along each axis,
 so its occupied-cell count is identical at both origins. Table~\ref{tab:occupancy-budget} gives
 the resulting search sizes. Run \texttt{python}\ \path{code/occupancy.py} from
@@ -3612,8 +3628,7 @@ distances. These implementations do not operate on a stream.
 
 \paragraph{Reproduction and validation.}
 Work in \path{anc/benchmarks/}. The recorded compact data are sufficient to regenerate
-Figure~\ref{fig:paired}, Table~\ref{tab:paired-all} and the sweep summary with \texttt{python}\
-\path{code/report.py}. To rerun the measurements, use \texttt{python}\ \path{code/scale.py},
+Figure~\ref{fig:paired}, Table~\ref{tab:paired-all} and the sweep summary with \verb|python code/report.py|. To rerun the measurements, use \texttt{python}\ \path{code/scale.py},
 \texttt{python}\ \path{code/paired.py} and \texttt{python}\ \path{code/validation.py}, then
 regenerate the summaries. The raw runs include ordered retained indices; the compact records
 retain their hashes and counts, the grid widths, exact energies when available, and timings. The
@@ -3676,7 +3691,7 @@ uniform & $1/32$ & 24 & 4 & $0$ & 24 & 24 & 24 & 24 & 24\\
 Does a coarser exchange grid at large $k$ translate into a completed solve? We used six fixed
 arrays and varied only $k$ within each. The first panel samples 2,048 points in 24 tight
 irregular groups (half-width $1/4096$); the second samples 1,024 points around 256 lattice
-centres (half-width $1/256$). Each panel uses seeds 17, 29 and 43, accuracy $1/2$, the common
+centers (half-width $1/256$). Each panel uses seeds 17, 29 and 43, accuracy $1/2$, the common
 physical origin $(0,0)$ and the same deterministic first-index representative. Coordinates
 and their order stay fixed. For each of the 57 array/cardinality pairs we built the incumbent
 (I), exchange (X) and hybrid (H) grids, rotating method order. The primary search required
@@ -3743,17 +3758,18 @@ direction is supplied, with $p$ exceptional sites. Project only core--core inter
 axis and assign infinite cost to projected collisions. Keep all interactions involving exceptions
 exact. Once the selected exceptions are fixed, sites sharing one projected coordinate have the
 same projected interactions with the rest of the core; among them, keep the least expensive unary
-choice. Let $V$ be the minimum projected cost and $U$ the original energy of its realizing subset
-if $V$ is finite. The ordered solver, allowing at most one selected site per equal projected
-coordinate, takes $O(2^p n^6)$ arithmetic operations. The certified interval is
+choice. The ordered solver allows at most one selected site per projected coordinate and takes
+$O(2^p n^6)$ arithmetic operations. If the projected optimum $V$ is finite, let $U$ be the
+original energy of a selection attaining $V$. Then
 \[
   \frac{V}{1+W^2V}\ \le\ \OPT\ \le\ U\ \le\ V.
 \]
 Indeed if the projected pair cost is $a$, the true cost is at least $a/(1+W^2a)$ by Pythagoras; an
 unchanged term also satisfies this inequality. Summing gives a lower bound of $Q/(1+W^2Q)$ for a
 selection of projected cost $Q$, by using the common denominator $1+W^2Q$. A projected collision
-alone costs at least $W^{-2}$ in the original metric when $W>0$. The interval collapses at $W=0$;
-positive width alone gives no scale-independent relative accuracy.
+alone costs at least $W^{-2}$ in the original metric when $W>0$. If $V=+\infty$, every
+feasible selection has such a collision, so $W^{-2}$ is a lower bound and any feasible
+selection supplies an upper bound. At $W=0$ the projection is exact.
 
 A radius $R>0$ can encode a modeling decision that sites farther apart are sufficiently separated.
 Retain their inverse-square interaction only for pairs at distance at most $R$, and let $G_R$ be
@@ -3780,43 +3796,45 @@ $\binom{k}{2}D^{-2}$ to the exact minimum residual cost gives a lower bound $B$ 
 optimum. The same treewidth dynamic program applies with the supplied decomposition; sharper bins
 may increase its width. No such proxy was needed for the independently verified Swiss optimum.
 
+\clearpage
 \section{Reproducing the computations}\label{app:reproduce}
-All figures and references are part of this \LaTeX\ source. To build the
-paper independently of the experiments, place \path{main_arxiv_v1.tex}
-and \path{PRIMEarxiv.sty} in the same directory and run
-\texttt{pdflatex main\_arxiv\_v1.tex} until the cross-references settle.
-The ancillary directory \path{anc/} contains the Python implementation,
-inputs and recorded outputs. The frozen Swiss candidates and the deterministic
-synthetic generators suffice for all optimization results; the runs below use
-no network services. We used Python 3.12.2 and NumPy 1.26.4.
+The \href{https://github.com/emmerichmtm/PCGA-Riesz}{PCGA-Riesz repository} contains the
+implementation, Swiss site coordinates and exact solution records. The archived
+\href{https://github.com/emmerichmtm/PCGA-Riesz/releases/tag/arxiv-v1}{experimental release
+(\texttt{arxiv-v1})} also provides the ordered benchmark point arrays, the full measurement
+logs and SHA-256 checksums. Its \texttt{points-index.csv} maps each of the 339 recorded
+cases to an array, coordinate denominator and checksum. Synthetic benchmark coordinates are
+integer numerators divided by $2^{20}$. The Swiss CSV gives integer metres in LV95 (EPSG:2056).
 
-\paragraph{Start with a replay.}
-From the extracted source root, run \verb|python anc/reproduce.py|. The
-driver works on a temporary copy. It regenerates the summary table and plot
-series from the recorded benchmark runs, recomputes all 171 fixed-input grids and checks the
-recorded completed-solve energies against their selected sites. It checks the two grid origins on the
-five-cluster example, and checks the polygon and metric examples. It also
-repeats the three small geometric walkthroughs. Wall-clock timeouts are recorded outcomes;
-the default replay does not time them again. To add the full Swiss
-optimization and regenerate the map, use \verb|python anc/reproduce.py --swiss|.
-The Swiss audit compares the selected sites, exact rational energies and
-accepted replacements with the reference data. Allow about 1~GB of free memory
-for that run. Either command reports a failure if a checked result disagrees.
+\paragraph{Replay the reported results.}
+With Python 3.12 and NumPy 1.26.4, run the following command from the root of either the
+repository or the extracted arXiv source archive:
+\begin{quote}\verb|python anc/reproduce.py --swiss|\end{quote}
+The driver works offline on a temporary copy. It rebuilds the benchmark summaries, checks
+all 171 grids on the six fixed inputs, verifies the returned subset energies, and repeats the
+small geometric examples. The Swiss audit recomputes the two reduced optima, the full-input
+optimum and the sequence of eight accepted hybrid moves. Allow about 1~GB of free memory.
+Omit \texttt{--swiss} for the shorter replay. Recorded timeouts remain observations from
+the original machine.
 
-\paragraph{Rerun measurements or inspect individual stages.}
-Appendix~\ref{sec:epas-gallery} starts from ten explicit points;
-Appendix~\ref{sec:swiss-density} identifies the Swiss inputs, figure program
-and full-optimum audit. For the synthetic experiments, the \path{README.md}
-in \path{anc/benchmarks/} lists the drivers in execution order, their seeds,
-budgets, and output records. It distinguishes rebuilding summaries from
-rerunning timing measurements. Run the timing drivers sequentially in a
-fresh copy: exact scores and cell membership are deterministic for a
-completed solve, while timings and outcomes at a wall-clock cutoff may vary.
+\paragraph{Run an individual study.}
+The paths in Appendices~\ref{sec:supp-extra}--\ref{sec:paired-protocol} refer to the
+arXiv source archive. To recreate that layout from a Git checkout, run
+\begin{quote}\verb|python anc/reproduce.py --export ../riesz-paper|\end{quote}
+from the repository root, choosing a new directory for the export. For example, in
+\path{anc/benchmarks/} of the exported copy, \verb|python code/fixed_inputs.py --check|
+rebuilds the grids in Table~\ref{tab:fixed-input}. The benchmark README gives the seeds,
+budgets and commands for fresh timings. Run timed experiments sequentially. Exact scores
+and cell membership are deterministic for a completed solve.
+
+To typeset the paper, keep \path{main_arxiv_v1.tex} and \path{PRIMEarxiv.sty} together and
+run pdf\LaTeX{} until the references settle. All figures and bibliographic entries are inline.
 
 \clearpage
 \phantomsection\pdfbookmark[0]{References}{references}
 
 \begin{thebibliography}{99}
+
 \bibitem{atta2026}
 Soumen Atta.
 \newblock {Riesz} energy minimization facility location problem in the plane:
@@ -3833,41 +3851,6 @@ Soumen Atta and Michael Emmerich.
 \newblock \href {https://doi.org/10.1007/s12293-026-00531-4}
   {\path{doi:10.1007/s12293-026-00531-4}}.
 
-\bibitem{borodachov2019}
-Sergiy~V. Borodachov, Douglas~P. Hardin, and Edward~B. Saff.
-\newblock {\em Discrete Energy on Rectifiable Sets}.
-\newblock Springer Monographs in Mathematics. Springer, New York, 2019.
-\newblock \href{https://doi.org/10.1007/978-0-387-84808-2}{\path{doi:10.1007/978-0-387-84808-2}}.
-
-\bibitem{cygan2015}
-Marek Cygan, Fedor~V. Fomin, {\L}ukasz Kowalik, Daniel Lokshtanov, D{\'a}niel
-  Marx, Marcin Pilipczuk, Micha{\l} Pilipczuk, and Saket Saurabh.
-\newblock {\em Parameterized Algorithms}.
-\newblock Springer, 2015.
-\newblock \href {https://doi.org/10.1007/978-3-319-21275-3}
-  {\path{doi:10.1007/978-3-319-21275-3}}.
-
-\bibitem{line2026}
-Michael Emmerich.
-\newblock Polynomial-time {Riesz}-energy subset selection for ordered point
-  sets on lines and {$\ell_1$}-staircases, 2026.
-\newblock Preprint, arXiv:2606.16946v5.
-\newblock URL: \url{https://arxiv.org/abs/2606.16946v5}.
-
-\bibitem{plane2026}
-Michael Emmerich.
-\newblock {Riesz} energy subset selection in the {Euclidean} plane is
-  {NP}-hard: A reduction from the {Ising} model on planar cubic graphs, 2026.
-\newblock Preprint, arXiv:2608.23506v3.
-\newblock URL: \url{https://arxiv.org/abs/2608.23506v3}.
-
-\bibitem{metric2026}
-Michael T.~M. Emmerich, Ksenia Pereverdieva, and Andr{\'e} Deutz.
-\newblock On the complexity of minimum {Riesz} {$s$}-energy subset selection in
-  {Euclidean} and ultrametric spaces, 2026.
-\newblock Preprint, arXiv:2605.04715v1.
-\newblock URL: \url{https://arxiv.org/abs/2605.04715v1}.
-
 \bibitem{falcon2026}
 Jes{\'u}s~Guillermo Falc{\'o}n-Cardona, Julio Ju{\'a}rez, Luis~A.
   M{\'a}rquez-Vega, and Michael T.~M. Emmerich.
@@ -3878,6 +3861,23 @@ Jes{\'u}s~Guillermo Falc{\'o}n-Cardona, Julio Ju{\'a}rez, Luis~A.
 \newblock Early access 2025.
 \newblock \href {https://doi.org/10.1109/TEVC.2025.3570938}
   {\path{doi:10.1109/TEVC.2025.3570938}}.
+
+\bibitem{pereverdieva2025}
+Ksenia Pereverdieva, Andr{\'e} Deutz, Tessa Ezendam, Thomas B{\"a}ck, H{\`e}rm
+  Hofmeyer, and Michael Emmerich.
+\newblock Comparative analysis of indicators for multi-objective diversity
+  optimization.
+\newblock In {\em Evolutionary Multi-Criterion Optimization ({EMO} 2025), Part
+  II}, volume 15513 of {\em LNCS}, pages 58--71. Springer, 2025.
+\newblock \href {https://doi.org/10.1007/978-981-96-3538-2_5}
+  {\path{doi:10.1007/978-981-96-3538-2_5}}.
+
+\bibitem{metric2026}
+Michael T.~M. Emmerich, Ksenia Pereverdieva, and Andr{\'e} Deutz.
+\newblock On the complexity of minimum {Riesz} {$s$}-energy subset selection in
+  {Euclidean} and ultrametric spaces, 2026.
+\newblock Preprint, arXiv:2605.04715v1.
+\newblock URL: \url{https://arxiv.org/abs/2605.04715v1}.
 
 \bibitem{falconDiversity2025}
 Jes{\'u}s~Guillermo Falc{\'o}n-Cardona, Lourdes Uribe, and Pablo Rosas.
@@ -3891,22 +3891,25 @@ Douglas~P. Hardin and Edward~B. Saff.
 \newblock {\em Advances in Mathematics}, 193(1):174--204, 2005.
 \newblock \href{https://doi.org/10.1016/j.aim.2004.05.006}{\path{doi:10.1016/j.aim.2004.05.006}}.
 
-\bibitem{pereverdieva2025}
-Ksenia Pereverdieva, Andr{\'e} Deutz, Tessa Ezendam, Thomas B{\"a}ck, H{\`e}rm
-  Hofmeyer, and Michael Emmerich.
-\newblock Comparative analysis of indicators for multi-objective diversity
-  optimization.
-\newblock In {\em Evolutionary Multi-Criterion Optimization ({EMO} 2025), Part
-  II}, volume 15513 of {\em LNCS}, pages 58--71. Springer, 2025.
-\newblock \href {https://doi.org/10.1007/978-981-96-3538-2_5}
-  {\path{doi:10.1007/978-981-96-3538-2_5}}.
+\bibitem{borodachov2019}
+Sergiy~V. Borodachov, Douglas~P. Hardin, and Edward~B. Saff.
+\newblock {\em Discrete Energy on Rectifiable Sets}.
+\newblock Springer Monographs in Mathematics. Springer, New York, 2019.
+\newblock \href{https://doi.org/10.1007/978-0-387-84808-2}{\path{doi:10.1007/978-0-387-84808-2}}.
 
+\bibitem{line2026}
+Michael T.~M. Emmerich.
+\newblock Polynomial-time {Riesz}-energy subset selection for ordered point
+  sets on lines and {$\ell_1$}-staircases, 2026.
+\newblock Preprint, arXiv:2606.16946v5.
+\newblock URL: \url{https://arxiv.org/abs/2606.16946v5}.
 
-\bibitem{gonzalez1985}
-Teofilo~F. Gonzalez.
-\newblock Clustering to minimize the maximum intercluster distance.
-\newblock {\em Theoretical Computer Science}, 38:293--306, 1985.
-\newblock \href{https://doi.org/10.1016/0304-3975(85)90224-5}{\path{doi:10.1016/0304-3975(85)90224-5}}.
+\bibitem{plane2026}
+Michael Emmerich.
+\newblock {Riesz} energy subset selection in the {Euclidean} plane is
+  {NP}-hard: A reduction from the {Ising} model on planar cubic graphs, 2026.
+\newblock Preprint, arXiv:2608.23506v3.
+\newblock URL: \url{https://arxiv.org/abs/2608.23506v3}.
 
 \bibitem{ceccarello2017}
 Matteo Ceccarello, Andrea Pietracaprina, Geppino Pucci, and Eli Upfal.
@@ -3914,11 +3917,11 @@ Matteo Ceccarello, Andrea Pietracaprina, Geppino Pucci, and Eli Upfal.
 \newblock {\em Proceedings of the VLDB Endowment}, 10(5):469--480, 2017.
 \newblock \href{https://doi.org/10.14778/3055540.3055541}{\path{doi:10.14778/3055540.3055541}}.
 
-\bibitem{cevallos2018}
-Alfonso Cevallos, Friedrich Eisenbrand, and Sarah Morell.
-\newblock Diversity maximization in doubling metrics.
-\newblock In {\em 29th International Symposium on Algorithms and Computation (ISAAC 2018)}, volume 123 of {\em LIPIcs}, pages 33:1--33:12. Schloss Dagstuhl--Leibniz-Zentrum f{\"u}r Informatik, 2018.
-\newblock \href{https://doi.org/10.4230/LIPIcs.ISAAC.2018.33}{\path{doi:10.4230/LIPIcs.ISAAC.2018.33}}.
+\bibitem{gonzalez1985}
+Teofilo~F. Gonzalez.
+\newblock Clustering to minimize the maximum intercluster distance.
+\newblock {\em Theoretical Computer Science}, 38:293--306, 1985.
+\newblock \href{https://doi.org/10.1016/0304-3975(85)90224-5}{\path{doi:10.1016/0304-3975(85)90224-5}}.
 
 \bibitem{hardinEtAl2019}
 Douglas~P. Hardin, Alexander Reznikov, Edward~B. Saff, and Alexander Volberg.
@@ -3926,12 +3929,44 @@ Douglas~P. Hardin, Alexander Reznikov, Edward~B. Saff, and Alexander Volberg.
 \newblock {\em International Mathematics Research Notices}, 2019(16):5066--5086, 2019.
 \newblock \href{https://doi.org/10.1093/imrn/rnx262}{\path{doi:10.1093/imrn/rnx262}}.
 
+\bibitem{cevallos2018}
+Alfonso Cevallos, Friedrich Eisenbrand, and Sarah Morell.
+\newblock Diversity maximization in doubling metrics.
+\newblock In {\em 29th International Symposium on Algorithms and Computation (ISAAC 2018)}, volume 123 of {\em LIPIcs}, pages 33:1--33:12. Schloss Dagstuhl--Leibniz-Zentrum f{\"u}r Informatik, 2018.
+\newblock \href{https://doi.org/10.4230/LIPIcs.ISAAC.2018.33}{\path{doi:10.4230/LIPIcs.ISAAC.2018.33}}.
+
+\bibitem{cygan2015}
+Marek Cygan, Fedor~V. Fomin, {\L}ukasz Kowalik, Daniel Lokshtanov, D{\'a}niel
+  Marx, Marcin Pilipczuk, Micha{\l} Pilipczuk, and Saket Saurabh.
+\newblock {\em Parameterized Algorithms}.
+\newblock Springer, 2015.
+\newblock \href {https://doi.org/10.1007/978-3-319-21275-3}
+  {\path{doi:10.1007/978-3-319-21275-3}}.
+
+\bibitem{chew1986}
+L. Paul Chew and Robert L. Scot Drysdale.
+\newblock Finding largest empty circles with location constraints.
+\newblock Dartmouth College, Computer Science Technical Report PCS-TR86-130, 1986.
+\newblock \url{https://digitalcommons.dartmouth.edu/cs_tr/29/}.
+
+\bibitem{morris1995}
+Max D. Morris and Toby J. Mitchell.
+\newblock Exploratory designs for computational experiments.
+\newblock \emph{Journal of Statistical Planning and Inference}, 43:381--402, 1995.
+\newblock \href{https://doi.org/10.1016/0378-3758(94)00035-T}{doi:10.1016/0378-3758(94)00035-T}.
+
+\bibitem{bondarenko}
+A. V. Bondarenko, D. P. Hardin, and E. B. Saff.
+\newblock Mesh ratios for best-packing and limits of minimal energy configurations.
+\newblock \emph{Acta Mathematica Hungarica}, 142(1):118--131, 2014.
+\newblock \href{https://doi.org/10.1007/s10474-013-0339-3}{\path{doi:10.1007/s10474-013-0339-3}}.
 
 \bibitem{bougeret2014}
 Marin Bougeret, Nicolas Bousquet, Rodolphe Giroudeau, and R\'emi Watrigant.
 \newblock Parameterized complexity of the sparsest $k$-subgraph problem in chordal graphs.
 \newblock In \emph{SOFSEM 2014}, LNCS 8327, pages 150--161, 2014.
 \newblock \href{https://doi.org/10.1007/978-3-319-04298-5_14}{doi:10.1007/978-3-319-04298-5\_14}.
+
 \bibitem{swissaddresses}
 Federal Office of Topography swisstopo.
 \newblock \emph{Official directory of building addresses}, national LV95 CSV,
@@ -3942,21 +3977,6 @@ edition of 5 November 2026.
 Federal Office of Topography swisstopo.
 \newblock \emph{swissBOUNDARIES3D}, January 2026, national territory in LV95.
 \newblock \url{https://data.geo.admin.ch/api/stac/v1/collections/ch.swisstopo.swissboundaries3d/items/swissboundaries3d_2026-01}.
-
-\bibitem{chew1986}
-L. Paul Chew and Robert L. Scot Drysdale.
-\newblock Finding largest empty circles with location constraints.
-\newblock Dartmouth College, Computer Science Technical Report PCS-TR86-130, 1986.
-\newblock \url{https://digitalcommons.dartmouth.edu/cs_tr/29/}.
-\bibitem{morris1995}
-Max D. Morris and Toby J. Mitchell.
-\newblock Exploratory designs for computational experiments.
-\newblock \emph{Journal of Statistical Planning and Inference}, 43:381--402, 1995.
-\newblock \href{https://doi.org/10.1016/0378-3758(94)00035-T}{doi:10.1016/0378-3758(94)00035-T}.
-\bibitem{bondarenko}
-A. V. Bondarenko, D. P. Hardin, and E. B. Saff.
-\newblock Mesh ratios for best-packing and limits of minimal energy configurations.
-\newblock \href{https://arxiv.org/abs/1212.6211}{arXiv:1212.6211}, 2012.
 \end{thebibliography}
 
 \end{document}

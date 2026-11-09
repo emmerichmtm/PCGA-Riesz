@@ -1,6 +1,8 @@
 # Reproduce *Parameterized Complexity and Geometric Approximation of Riesz Energy Subset Selection*
 
-Michael Emmerich and Soumen Atta, first preprint version, 7 November 2026.
+Michael Emmerich and Soumen Atta, Faculty of Information Technology, University of Jyväskylä, Finland.
+
+The [PCGA-Riesz repository](https://github.com/emmerichmtm/PCGA-Riesz) hosts the paper and implementation. The [archived experimental release](https://github.com/emmerichmtm/PCGA-Riesz/releases/tag/arxiv-v1) provides the ordered benchmark coordinates, full run records and SHA-256 checksums.
 
 From the directory containing `main_arxiv_v1.tex`, run:
 

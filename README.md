@@ -3,7 +3,7 @@
 **Parameterized Complexity and Geometric Approximation of Riesz Energy Subset Selection**  
 Michael Emmerich and Soumen Atta · Faculty of Information Technology, University of Jyväskylä, Finland
 
-This repository accompanies the arXiv manuscript. It contains the planar Riesz-energy selection algorithm, the candidate sites, the measured runs and the code that checks the reported solutions. [Read the paper](main_arxiv_v1.pdf) · [LaTeX source](main_arxiv_v1.tex) · [Download the data and source release](https://github.com/emmerichmtm/PCGA-Riesz/releases/tag/arxiv-v1)
+This repository accompanies the arXiv manuscript. It contains the planar Riesz-energy selection algorithm, the candidate sites, the measured runs and the code that checks the reported solutions. [Read the paper](main_arxiv_v1.pdf) · [LaTeX source](main_arxiv_v1.tex) · [Manuscript download](https://github.com/emmerichmtm/PCGA-Riesz/releases/tag/arxiv-v1.1) · [Experimental data release](https://github.com/emmerichmtm/PCGA-Riesz/releases/tag/arxiv-v1)
 
 ## Reproduce the results
 
@@ -50,4 +50,4 @@ cd ../riesz-paper/anc/benchmarks
 python code/fixed_inputs.py --check
 ```
 
-The [arXiv source ZIP](https://github.com/emmerichmtm/PCGA-Riesz/releases/download/arxiv-v1/arxiv-source-v1.zip) provides the same exported layout. The [benchmark guide](anc/benchmarks-guide.md) gives the commands for fresh timed runs. Wall-clock results can vary by machine. To recreate the downloadable coordinate arrays from the published generators, run `python anc/export_points.py ../riesz-points` in the checkout. [Release checksums](anc/release-SHA256SUMS.txt)
+The [arXiv source ZIP](https://github.com/emmerichmtm/PCGA-Riesz/releases/download/arxiv-v1.1/arxiv-source-v1.zip) provides the same exported layout. The [benchmark guide](anc/benchmarks-guide.md) gives the commands for fresh timed runs. Wall-clock results can vary by machine. To recreate the downloadable coordinate arrays from the published generators, run `python anc/export_points.py ../riesz-points` in the checkout. [Experimental release checksums](anc/release-SHA256SUMS.txt)
