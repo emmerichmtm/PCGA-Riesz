@@ -180,12 +180,9 @@ W[1]-complete exact decision in $k$ and excludes a deterministic EPAS at accurac
 $k$, unless $\mathrm{FPT}=\mathsf{W[1]}$ (Theorem~\ref{thm:metric-barrier}). It leaves both
 fixed-factor approximation in general metrics and exact planar FPT open here.
 
-Appendix~\ref{sec:structure-short} sketches three alternatives at $s=2$: a Manhattan staircase is
-isometric to a line after exceptional sites are set aside; projecting a nearly collinear Euclidean
-core gives a certificate depending on strip width; and a cutoff graph of small treewidth admits
-exact dynamic programming for the proxy, with an additive bound on the omitted tail. Our
-experiments in Section~\ref{sec:experiments} use the full energy without imposing any of these
-three structures.
+Section~\ref{sec:experiments} also considers lower bounds from cutoff and binned proxies.
+When the proxy graph has small treewidth, its optimum can be computed exactly
+(Appendix~\ref{sec:structure-short}).
 
 The paper separates three questions: how much a point of an unknown optimum can move
 (Section~\ref{sec:epas}), which geometric hypotheses are needed
@@ -1705,6 +1702,7 @@ rounding that exploits more than minimum separation. Without geometric packing, 
 distances suffice for W[1]-complete exact decision and rule out a deterministic EPAS under
 $\mathrm{FPT}\ne\mathsf{W[1]}$. The obstruction uses accuracy tending to zero; it settles neither
 fixed-factor approximation in general metrics nor exact FPT in the Euclidean plane.
+The line algorithm~\cite{line2026} suggests studying inputs with a few sites outside a line or a Manhattan staircase, and quantifying the error of projecting a narrow Euclidean strip onto its axis.
 
 In practice one can compute both certificates, keep the coarser grid, then inspect $M$ and
 $\binom Mk$ before committing to a search. A million clustered sites left just 252 five-site
@@ -1731,7 +1729,7 @@ in individual proofs and in the exact-search implementation are defined where us
 For the proofs and code, Appendix~\ref{sec:supp-extra} gives the arithmetic,
 Appendices~\ref{app:walk}--\ref{sec:paired-protocol} give the worked examples
 and experiments, and Appendix~\ref{app:reproduce} gives a single command
-to replay them. Appendix~\ref{sec:structure-short} treats structural alternatives.
+to replay them. Appendix~\ref{sec:structure-short} gives the treewidth algorithm for proxy lower bounds.
 
 \begingroup\small
 \setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.07}
@@ -3740,37 +3738,8 @@ verify exact energies of the returned subsets. Use \verb|--summary| for the reco
 \path{results/fixed-input-points.json} and \path{results/fixed-input-runs.json}; they include
 input and representative hashes, certificate values, grid widths, search sizes and statuses.
 
-\section{Staircases, nearly collinear sets, and cutoff proxies}\label{sec:structure-short}
-These alternatives illustrate the difference between an exact structural parameter and an error
-certificate. We describe the rational planar case $s=2$. The first two approaches exploit an order
-on most sites; the third exploits a sparse lower bound on a dense objective.
-
-On a coordinatewise monotone staircase in Manhattan distance, reflect coordinates as needed and
-order the sites along the staircase. The coordinate $u=x+y$ then satisfies $\|z_j-z_i\|_1=u_j-u_i$
-for $i<j$. If deleting $p$ exceptional sites leaves such a staircase, find a maximum staircase by
-longest-chain dynamic programming, then enumerate which exceptions are selected. For each choice
-their interactions with a core site become a unary cost. This adds only linear terms to the
-threshold minimum-cut formulation on a line~\cite{line2026}, so the optimum is exact in $O(2^p
-n^6)$ arithmetic operations. The same argument applies to an exactly collinear Euclidean core,
-found by testing lines through pairs of sites.
-
-For a nearly collinear Euclidean core, suppose instead that a strip of width $W$ and rational axis
-direction is supplied, with $p$ exceptional sites. Project only core--core interactions onto the
-axis and assign infinite cost to projected collisions. Keep all interactions involving exceptions
-exact. Once the selected exceptions are fixed, sites sharing one projected coordinate have the
-same projected interactions with the rest of the core; among them, keep the least expensive unary
-choice. The ordered solver allows at most one selected site per projected coordinate and takes
-$O(2^p n^6)$ arithmetic operations. If the projected optimum $V$ is finite, let $U$ be the
-original energy of a selection attaining $V$. Then
-\[
-  \frac{V}{1+W^2V}\ \le\ \OPT\ \le\ U\ \le\ V.
-\]
-Indeed if the projected pair cost is $a$, the true cost is at least $a/(1+W^2a)$ by Pythagoras; an
-unchanged term also satisfies this inequality. Summing gives a lower bound of $Q/(1+W^2Q)$ for a
-selection of projected cost $Q$, by using the common denominator $1+W^2Q$. A projected collision
-alone costs at least $W^{-2}$ in the original metric when $W>0$. If $V=+\infty$, every
-feasible selection has such a collision, so $W^{-2}$ is a lower bound and any feasible
-selection supplies an upper bound. At $W=0$ the projection is exact.
+\section{Certified lower bounds from proxies of bounded treewidth}\label{sec:structure-short}
+We give the lower-bound construction for rational planar sites and inverse-square energy.
 
 A radius $R>0$ can encode a modeling decision that sites farther apart are sufficiently separated.
 Retain their inverse-square interaction only for pairs at distance at most $R$, and let $G_R$ be
@@ -3797,7 +3766,6 @@ $\binom{k}{2}D^{-2}$ to the exact minimum residual cost gives a lower bound $B$ 
 optimum. The same treewidth dynamic program applies with the supplied decomposition; sharper bins
 may increase its width. No such proxy was needed for the independently verified Swiss optimum.
 
-\clearpage
 \section{Reproducing the computations}\label{app:reproduce}
 The \href{https://github.com/emmerichmtm/PCGA-Riesz}{PCGA-Riesz repository} contains the
 implementation, Swiss site coordinates and exact solution records. The archived
