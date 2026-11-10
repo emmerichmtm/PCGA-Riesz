@@ -57,23 +57,24 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Selecting $k$ sites of minimum inverse-square Riesz energy is polynomial on a line but NP-hard
-in the plane. Adapting the proxy lemma of Ceccarello et al.\ gives an efficient parameterized
-approximation scheme (EPAS) for fixed Euclidean dimension and Riesz exponent $s>0$.
-We sharpen the resulting bound by averaging the interaction cost of one selected site over
-feasible replacements among $2k$ farthest-first centers.
-In the plane at $s=2$, this improves the representative bound from
-$O(k^2\log(2k)/\varepsilon^2)$ for a packing estimate of total energy to
-$O(k\log(2k)/\varepsilon^2)$. We construct rational planar instances where every optimum
-has a pair at distance $\Theta(r/\sqrt{\log k})$, matching the separation bound in terms of
-the last center's insertion distance $r$. A $(1+\varepsilon)$ approximation on $n$
-rational planar sites takes $O(nk+n\log n)+(C\log(2k)/\varepsilon^2)^k$ operations of
-polynomial bit cost. The observed count $M$ of representatives gives the search size $\binom{M}{k}$.
-On a million sites, the exchange grid left 252 five-site subsets for clustered data and about
-$9.3\times10^{26}$ for uniform data. The argument extends to bounded-doubling metrics and to
-compact domains with effective geometric routines, including filled simple polygons. At $s=2$, exact decision
-on metrics with nonzero distances in $\{1,2\}$ is W[1]-complete in $k$. A gap shrinking with
-$k$ rules out a deterministic EPAS on unrestricted metrics unless $\mathrm{FPT}=\mathsf{W[1]}$.
+We choose $k$ of $n$ sites to minimize Riesz $s$-energy, in which a pair at distance $t$ contributes
+$t^{-s}$. For $s=2$, exact selection is polynomial on a line but NP-hard in the plane. Adapting the
+proxy lemma of Ceccarello et al. gives an efficient parameterized approximation scheme (EPAS) for fixed
+Euclidean dimension and fixed $s>0$. To sharpen the bound, we start with a geometric packing.
+Farthest-first traversal gives $2k$ centers separated by at least the last insertion distance $r$. If
+one site of an optimum is removed, each of the $k-1$ remaining sites excludes at most one center closer
+than $r/2$, leaving at least $k+1$ centers free. The new step is a discrete exchange bound: the removed
+site's interaction energy is at most the average it would contribute at those free centers. In the plane
+at $s=2$, this reduces the representative bound from $O(k^2\log(2k)/\varepsilon^2)$ for a packing
+estimate of total energy to $O(k\log(2k)/\varepsilon^2)$, independently of $n$. Rational planar examples
+show that the resulting separation scale $r/\sqrt{\log(2k)}$ is sharp. A $(1+\varepsilon)$ approximation
+on rational planar sites takes $O(nk+n\log n)+(C\log(2k)/\varepsilon^2)^k$ operations of polynomial bit
+cost. The observed number $M$ of representatives determines the search size $\binom{M}{k}$. With one
+million sites, $k=5$ and $\varepsilon=1/2$, the exchange grid left 252 subsets on clustered inputs and
+about $9.3\times10^{26}$ on uniform inputs. The method extends to metrics of bounded doubling dimension
+and to compact domains with effective geometric routines, including filled simple polygons. At $s=2$,
+exact decision on metrics with nonzero distances in $\{1,2\}$ is W[1]-complete in $k$. A gap that
+shrinks with $k$ rules out a deterministic EPAS on unrestricted metrics unless FPT = W[1].
 
 \end{abstract}
 \keywords{Riesz energy \and subset selection \and computational geometry \and
